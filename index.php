@@ -6,11 +6,11 @@
 		<title>Lay Down the Boogie</title>
 		<!-- Bootstrap -->
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-			<link href="/css/iOS.css" rel="stylesheet">
-			<script src="/js/jquery.js"></script> 
-			<script src="/bootstrap/js/bootstrap.min.js"></script>
-			<script src="/js/gatracking.js"></script>
+			<link href="/laydowntheboogie/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+			<link href="/laydowntheboogie/css/iOS.css" rel="stylesheet">
+			<script src="/laydowntheboogie/js/jquery.js"></script> 
+			<script src="/laydowntheboogie/bootstrap/js/bootstrap.min.js"></script>
+			<script src="/laydowntheboogie/js/gatracking.js"></script>
 			<link rel="icon" href="favicon.ico" type="image/x-icon"> 
 			<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
 	</head>
