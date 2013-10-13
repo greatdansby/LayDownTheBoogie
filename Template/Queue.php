@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('205.178.146.107', 'dmitus','Europe04', 'boogie_requests');
+$con = mysqli_connect('127.0.0.1', 'boogie','boogie6', 'boogie_requests');
 if (!$con)
   {
   die('Could not connect: ' . mysqli_error());
@@ -42,11 +42,11 @@ function loadArray($result,$columns){
 		<title>Lay Down the Boogie - <?echo $dj;?></title>
 		<!-- Bootstrap -->
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-			<link href="/css/iOS.css" rel="stylesheet">
-			<script src="/js/jquery.js"></script> 
-			<script src="/bootstrap/js/bootstrap.min.js"></script>
-			<script src="/js/gatracking.js"></script>
+			<link href="/laydowntheboogie/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+			<link href="/laydowntheboogie/css/iOS.css" rel="stylesheet">
+			<script src="/laydowntheboogie/js/jquery.js"></script> 
+			<script src="/laydowntheboogie/bootstrap/js/bootstrap.min.js"></script>
+			<script src="/laydowntheboogie/js/gatracking.js"></script>
 	</head>
 	<body>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
