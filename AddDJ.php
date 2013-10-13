@@ -1,6 +1,6 @@
 <?php
 
-$con = mysqli_connect('205.178.146.107', 'dmitus','Europe04', 'boogie_requests');
+$con = mysqli_connect('localhost', 'boogie','boogie6', 'boogie_requests');
 if (!$con)
   {
   die('Could not connect: ' . mysqli_error());
