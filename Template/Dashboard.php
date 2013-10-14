@@ -27,8 +27,8 @@ echo $username;
 		<div class="row">
 			<div class="col-xs-12">
 				<form action="SongsBySearch.php" method=GET>
-					<input type=hidden name=Username value="<?echo $Username;?>">
-					<input type=hidden name=Contact value="<?echo $Contact;?>">
+					<input type=hidden name=Username value="<?echo $username;?>">
+					<input type=hidden name=Contact value="<?echo $contact;?>">
 				<div class="input-group">
 					<input type="text" class="form-control" name=Terms>
 					<span class="input-group-btn">
