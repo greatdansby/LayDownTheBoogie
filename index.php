@@ -6,11 +6,11 @@
 		<title>Lay Down the Boogie</title>
 		<!-- Bootstrap -->
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link href="/laydowntheboogie/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-			<link href="/laydowntheboogie/css/iOS.css" rel="stylesheet">
-			<script src="/laydowntheboogie/js/jquery.js"></script> 
-			<script src="/laydowntheboogie/bootstrap/js/bootstrap.min.js"></script>
-			<script src="/laydowntheboogie/js/gatracking.js"></script>
+			<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+			<link href="/css/iOS.css" rel="stylesheet">
+			<script src="/js/jquery.js"></script> 
+			<script src="/bootstrap/js/bootstrap.min.js"></script>
+			<script src="/js/gatracking.js"></script>
 			<link rel="icon" href="favicon.ico" type="image/x-icon"> 
 			<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
 	</head>
@@ -18,7 +18,7 @@
     <div class="container" style="margin-top:10px;">
 		<div class="row">
 			<div class="col-xs-12">
-				<img src="/laydowntheboogie/img/logo.png" class="img-responsive" alt="Responsive logo">
+				<img src="/img/logo.png" class="img-responsive" alt="Responsive logo">
 			</div>
 		</div>
 		<div class="row">
@@ -39,7 +39,7 @@
 		<div class="row">
 		  <div class="col-sm-6 col-md-3 btn-margin">
 			<div class="thumbnail">
-			  <a href="#" class=thumbnail><img data-src="holder.js/171x180" src="/laydowntheboogie/img/noapp.png" alt="..."></a>
+			  <a href="#" class=thumbnail><img data-src="holder.js/171x180" src="/img/noapp.png" alt="..."></a>
 			  <div class="caption">
 				<h4>No App to Download</h4>
 				<p>Lay Down the Boogie is entirely web-based using responsive HTML5. This means it'll adapt to any smartphone, providing a great user experience.</p>
@@ -48,7 +48,7 @@
 		  </div>
 		  <div class="col-sm-6 col-md-3 btn-margin">
 			<div class="thumbnail">
-			  <a href="#" class=thumbnail><img data-src="holder.js/171x180"  src="/laydowntheboogie/img/list.png" alt="..."></a>
+			  <a href="#" class=thumbnail><img data-src="holder.js/171x180"  src="/img/list.png" alt="..."></a>
 			  <div class="caption">
 				<h4>Choose from a List</h4>
 				<p>Upload a custom list of songs for party-goers to choose from, or use one of our standard lists. Ensure that everyone can find the song that they're looking for.</p>
@@ -57,7 +57,7 @@
 		  </div>
 		  <div class="col-sm-6 col-md-3 btn-margin">
 			<div class="thumbnail">
-			  <a href="#" class=thumbnail><img data-src="holder.js/171x180" src="/laydowntheboogie/img/brand.png" alt="..."></a>
+			  <a href="#" class=thumbnail><img data-src="holder.js/171x180" src="/img/brand.png" alt="..."></a>
 			  <div class="caption">
 				<h4>Unique Branding</h4>
 				<p>Unique URL to advertise. Custom images for the event, or even a link to your personal website</p>
@@ -66,7 +66,7 @@
 		  </div>
 		  <div class="col-sm-6 col-md-3 btn-margin">
 			<div class="thumbnail">
-			  <a href="#" class=thumbnail><img data-src="holder.js/171x180" src="/laydowntheboogie/img/features.png" alt="..."></a>
+			  <a href="#" class=thumbnail><img data-src="holder.js/171x180" src="/img/features.png" alt="..."></a>
 			  <div class="caption">
 				<h4>New Features</h4>
 				<p>We're constantly innovating to come up with new ways to improve your customer's experience. Let's us know what we can do to support your business.</p>
