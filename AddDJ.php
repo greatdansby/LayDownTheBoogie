@@ -21,7 +21,7 @@ if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 $sql="INSERT INTO SongList(SongTitle, SongArtist, SongGenre, DJ) SELECT SongTitle, SongArtist, SongGenre, '$Name' FROM SongList WHERE DJ='Template'";
 if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 
-recurse_copy("Template","$Name");
+recurse_copy("Template",strtolower($Name));
 header('Location: /laydowntheboogie/SignedUp.php?Name='.urlencode($Name));
 }
 
