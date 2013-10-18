@@ -33,12 +33,12 @@
 			<li><a href="#branding">Branding</a></li>   
 			<li><a href="#features">New Features</a></li>  			
           </ul>
-          <form class="navbar-form navbar-right">
+          <form id="DJSignIn" class="navbar-form navbar-right" method=POST>
             <div class="form-group">
-              <input type="text" placeholder="Username" class="form-control">
+              <input type="text" placeholder="Username" class="form-control" onChange="$('DJSignIn').attr('action','/'+me.val()+'/DJDashboard.php');">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input type="password" placeholder="Password" class="form-control" id="pw" name="pw">
             </div>
             <button type="submit" class="btn btn-primary">DJ Sign in</button>
           </form>
@@ -54,7 +54,7 @@
     <div class="container" style="margin-top:10px;">
 		<div class="row">
 			<div class="col-xs-12">
-				
+				<a id="signup"></a>
 			</div>
 		</div>
 		<div class="row">
@@ -67,52 +67,52 @@
 				<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg btn-margin btn-block">Give Feedback</a>
 			</div>
 			<div class="col-xs-12 col-md-9">
-				<a id="signup">
-				<h2>Sign Up for the Beta Test</h2></a>
+				<h2>Sign Up for the Beta Test</h2>
 				<h4>Create a free account today during our beta phase using the form on the left</h4>
 			</div>
 		</div>
+		<a id="noapp"></a>
 		<hr class="featurette-divider">
 		<div class="row">
 			<div class="col-xs-12 col-md-9">
-				<a id="noapp">
-				<h2>No App to Download</h2></a>
+				
+				<h2>No App to Download</h2>
 				<h4>Lay Down the Boogie is entirely web-based using responsive HTML5. This means it'll adapt to any smartphone, providing a great user experience.</h4>
 			</div>
 			<div class="col-xs-12 col-md-3">
 				<img data-src="holder.js/171x180" src="/img/noapp.png" alt="...">
 			</div>
 		</div>
+		<a id="songlists"></a>
 		<hr class="featurette-divider">
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
 				<img data-src="holder.js/171x180"  src="/img/list.png" alt="...">
 			</div>
-			<div class="col-xs-12 col-md-9">
-				<a id="songlists">
-				<h2>Custom Song Lists</h2></a>
+			<div class="col-xs-12 col-md-9">				
+				<h2>Custom Song Lists</h2>
 				<h4>Upload a custom list of songs for party-goers to choose from, or use one of our standard lists. Ensure that everyone can find the song that they're looking for.</h4>
 			</div>
 		</div>
+		<a id="branding"></a>
 		<hr class="featurette-divider">
 		<div class="row">
-			<div class="col-xs-12 col-md-9">
-				<a id="branding">
-				<h2>Custom Branding</h2></a>
+			<div class="col-xs-12 col-md-9">				
+				<h2>Custom Branding</h2>
 				<h4>Unique URL to advertise. Custom images for the event, or even a link to your personal website.</h4>
 			</div>
 			<div class="col-xs-12 col-md-3">
 				<img data-src="holder.js/171x180" src="/img/brand.png" alt="...">
 			</div>
 		</div>
+		<a id="features"></a>
 		<hr class="featurette-divider">
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
 				<img data-src="holder.js/171x180" src="/img/features.png" alt="...">
 			</div>
-			<div class="col-xs-12 col-md-9">
-				<a id="features">
-				<h2>New Features</h2></a>
+			<div class="col-xs-12 col-md-9">				
+				<h2>New Features</h2>
 				<h4>We're constantly innovating to come up with new ways to improve your customer's experience. Let's us know what we can do to support your business.</h4>
 			</div>
 		</div>
