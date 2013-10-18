@@ -64,12 +64,12 @@
 				<button class="btn btn-block btn-lg btn-primary btn-margin" id="submitbtn" type=submit>Create a Trial Account</button>
 				<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg btn-margin btn-block">Give Feedback</a>
 			</div>
-			<div class="col-xs-12 col-md-4">
-				<h2>Sign Up for the Beta Test</h2>
+			<div class="col-xs-12 col-md-5">
+				<h1 class=white>Sign Up for the Beta Test</h1>
 				<h4>Create a free account today during our beta phase using the form on the left</h4>
 			</div>
-			<div class="col-xs-12 col-md-5">
-				<h2>Take it for a Test Drive</h2>
+			<div class="col-xs-12 col-md-4">
+				<h1 class=white>Take it for a Test Drive</h1>
 				<h4>Scan the QR code to see the live app on your phone. Or click here to see the app side-by-side with the DJ Dashboard.</h4>
 				<a href="http://laydowntheboogie.com/Template" class=thumbnail><img data-src="holder.js/171x180" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://laydowntheboogie.com/Template" alt="..."></a>
 			</div>
@@ -79,7 +79,7 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-9">
 				
-				<h2>No App to Download</h2>
+				<h1 class=white>No App to Download</h1>
 				<h4>Lay Down the Boogie is entirely web-based using responsive HTML5. This means it'll adapt to any smartphone, providing a great user experience.</h4>
 			</div>
 			<div class="col-xs-12 col-md-3">
@@ -93,7 +93,7 @@
 				<img data-src="holder.js/171x180"  src="/img/list.png" alt="...">
 			</div>
 			<div class="col-xs-12 col-md-9">				
-				<h2>Custom Song Lists</h2>
+				<h1 class=white>Custom Song Lists</h1>
 				<h4>Upload a custom list of songs for party-goers to choose from, or use one of our standard lists. Ensure that everyone can find the song that they're looking for.</h4>
 			</div>
 		</div>
@@ -101,7 +101,7 @@
 		<hr class="featurette-divider">
 		<div class="row">
 			<div class="col-xs-12 col-md-9">				
-				<h2>Custom Branding</h2>
+				<h1 class=white>Custom Branding</h1>
 				<h4>Unique URL to advertise. Custom images for the event, or even a link to your personal website.</h4>
 			</div>
 			<div class="col-xs-12 col-md-3">
@@ -115,7 +115,7 @@
 				<img data-src="holder.js/171x180" src="/img/features.png" alt="...">
 			</div>
 			<div class="col-xs-12 col-md-9">				
-				<h2>New Features</h2>
+				<h1 class=white>New Features</h1>
 				<h4>We're constantly innovating to come up with new ways to improve your customer's experience. Let's us know what we can do to support your business.</h4>
 			</div>
 		</div>
