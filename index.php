@@ -39,7 +39,7 @@
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">DJ Sign in</button>
+            <button type="submit" class="btn btn-primary">DJ Sign in</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -47,7 +47,7 @@
 	<div class="jumbotron">
       <div class="container">
         <img src="/img/logo.png" class="img-responsive" alt="Responsive logo">
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p>Lay Down the Boogie is a way for DJs to allow guests to request songs using their smartphone. As a DJ, you can manage your request queue, capture guest information and advertise your business in a new way.</p>
         <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
       </div>
     </div>
@@ -67,9 +67,8 @@
 				<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg btn-margin btn-block">Give Feedback</a>
 			</div>
 			<div class="col-xs-12 well col-md-9">
-				<h2>Mobile Song Request System</h2>
-				<h4>Currently in the beta test phase, Lay Down the Boogie is a way for DJs to connect with their audience in a new way by allowing guests to request songs and view other requests using their smartphone. As a DJ, you can manage your request queue, which is sorted by the most requested songs via your laptop or smartphone. Capture guest information for future marketing purposes and advertise your business in a new way. Allowing the user to select from a number of preconfigured songs ensures that you have a legible and clear list of what your customers want to hear.</h4>
-				<h3><u>Create a free account today during our beta phase using the form on the left</u></h3>
+				<h2>Sign Up for the Beta Test</h2>
+				<h4>Create a free account today during our beta phase using the form on the left</h4>
 			</div>
 		</div>
 		<div class="row">
