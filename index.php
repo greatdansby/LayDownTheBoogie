@@ -23,9 +23,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <img src="/img/logo.png" class="img-responsive" alt="Responsive logo">
         </div>
         <div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Sign-Up</a></li>
+            <li><a href="#noapp">No App</a></li>
+			<li><a href="#noapp">Song Lists</a></li>
+			<li><a href="#noapp">Branding</a></li>            
+          </ul>
           <form class="navbar-form navbar-right">
             <div class="form-group">
               <input type="text" placeholder="Username" class="form-control">
@@ -40,7 +46,7 @@
     </div>
 	<div class="jumbotron">
       <div class="container">
-        <h1>Hello, world!</h1>
+        <img src="/img/logo.png" class="img-responsive" alt="Responsive logo">
         <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
       </div>
