@@ -50,13 +50,11 @@
         <img src="/img/logo.png" class="img-responsive" alt="Responsive logo">
         <p>Lay Down the Boogie is a way for DJs to allow guests to request songs using their smartphone. As a DJ, you can manage your request queue, capture guest information and advertise your business in a new way.</p>
       </div>
+	  
     </div>
     <div class="container" style="margin-top:10px;">
-		<div class="row">
-			<div class="col-xs-12">
-				<a id="signup"></a>
-			</div>
-		</div>
+		<a id="signup"></a>
+		<hr class="featurette-divider">
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
 				<form method="POST" action="AddDJ.php">
@@ -66,9 +64,14 @@
 				<button class="btn btn-block btn-lg btn-primary btn-margin" id="submitbtn" type=submit>Create a Trial Account</button>
 				<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg btn-margin btn-block">Give Feedback</a>
 			</div>
-			<div class="col-xs-12 col-md-9">
+			<div class="col-xs-12 col-md-4">
 				<h2>Sign Up for the Beta Test</h2>
 				<h4>Create a free account today during our beta phase using the form on the left</h4>
+			</div>
+			<div class="col-xs-12 col-md-5">
+				<h2>Take it for a Test Drive</h2>
+				<h4>Scan the QR code to see the live app on your phone. Or click here to see the app side-by-side with the DJ Dashboard.</h4>
+				<a href="http://laydowntheboogie.com/Template" class=thumbnail><img data-src="holder.js/171x180" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://laydowntheboogie.com/Template" alt="..."></a>
 			</div>
 		</div>
 		<a id="noapp"></a>

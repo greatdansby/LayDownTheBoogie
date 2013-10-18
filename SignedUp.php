@@ -29,7 +29,7 @@ $Name = $_GET["Name"];
 		<div class="row">
 		  <div class="col-sm-6 col-md-6">
 			<div class="thumbnail">
-			  <a href="#" class=thumbnail><img data-src="holder.js/171x180" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=<?echo urlencode("http:/.com/$Name");?>" alt="..."></a>
+			  <a href="#" class=thumbnail><img data-src="holder.js/171x180" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=<?echo urlencode("http://laydowntheboogie.com/$Name");?>" alt="..."></a>
 			  <div class="caption">
 				<h3>Advertise</h3>
 				<p>Use the custom QR code above to advertise your site and direct customers to request songs. Or give them your URL: <h4><a href="<?echo "http://laydowntheboogie.com/$Name";?>"><?echo "http://LayDownTheBoogie.com/$Name";?></a></h4></p>
