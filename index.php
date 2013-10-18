@@ -13,6 +13,11 @@
 			<script src="/js/gatracking.js"></script>
 			<link rel="icon" href="favicon.ico" type="image/x-icon"> 
 			<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+			<style>
+			.featurette-divider {
+				margin: 50px 0; /* Space out the Bootstrap <hr> more */
+			}
+			</style>
 	</head>
 	<body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
@@ -27,10 +32,11 @@
         <div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">Sign-Up</a></li>
+            <li><a href="#signup">Sign-Up</a></li>
             <li><a href="#noapp">No App</a></li>
-			<li><a href="#noapp">Song Lists</a></li>
-			<li><a href="#noapp">Branding</a></li>            
+			<li><a href="#songlists">Song Lists</a></li>
+			<li><a href="#branding">Branding</a></li>   
+			<li><a href="#features">New Features</a></li>  			
           </ul>
           <form class="navbar-form navbar-right">
             <div class="form-group">
@@ -67,49 +73,55 @@
 				<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg btn-margin btn-block">Give Feedback</a>
 			</div>
 			<div class="col-xs-12 well col-md-9">
-				<h2>Sign Up for the Beta Test</h2>
+				<a id="signup">
+				<h2>Sign Up for the Beta Test</h2></a>
 				<h4>Create a free account today during our beta phase using the form on the left</h4>
 			</div>
 		</div>
+		<hr class="featurette-divider">
 		<div class="row">
-		  <div class="col-sm-6 col-md-3 btn-margin">
-			<div class="thumbnail">
-			  <a href="#" class=thumbnail><img data-src="holder.js/171x180" src="/img/noapp.png" alt="..."></a>
-			  <div class="caption">
-				<h4>No App to Download</h4>
-				<p>Lay Down the Boogie is entirely web-based using responsive HTML5. This means it'll adapt to any smartphone, providing a great user experience.</p>
-			  </div>
+			<div class="col-xs-12 col-md-9 well">
+				<a id="noapp">
+				<h2>No App to Download</h2></a>
+				<h4>Lay Down the Boogie is entirely web-based using responsive HTML5. This means it'll adapt to any smartphone, providing a great user experience.</h4>
 			</div>
-		  </div>
-		  <div class="col-sm-6 col-md-3 btn-margin">
-			<div class="thumbnail">
-			  <a href="#" class=thumbnail><img data-src="holder.js/171x180"  src="/img/list.png" alt="..."></a>
-			  <div class="caption">
-				<h4>Choose from a List</h4>
-				<p>Upload a custom list of songs for party-goers to choose from, or use one of our standard lists. Ensure that everyone can find the song that they're looking for.</p>
-			  </div>
+			<div class="col-xs-12 col-md-3">
+				<img data-src="holder.js/171x180" src="/img/noapp.png" alt="...">
 			</div>
-		  </div>
-		  <div class="col-sm-6 col-md-3 btn-margin">
-			<div class="thumbnail">
-			  <a href="#" class=thumbnail><img data-src="holder.js/171x180" src="/img/brand.png" alt="..."></a>
-			  <div class="caption">
-				<h4>Unique Branding</h4>
-				<p>Unique URL to advertise. Custom images for the event, or even a link to your personal website</p>
-			  </div>
-			</div>
-		  </div>
-		  <div class="col-sm-6 col-md-3 btn-margin">
-			<div class="thumbnail">
-			  <a href="#" class=thumbnail><img data-src="holder.js/171x180" src="/img/features.png" alt="..."></a>
-			  <div class="caption">
-				<h4>New Features</h4>
-				<p>We're constantly innovating to come up with new ways to improve your customer's experience. Let's us know what we can do to support your business.</p>
-			  </div>
-			</div>
-		  </div>
 		</div>
-			
+		<hr class="featurette-divider">
+		<div class="row">
+			<div class="col-xs-12 col-md-3">
+				<img data-src="holder.js/171x180"  src="/img/list.png" alt="...">
+			</div>
+			<div class="col-xs-12 col-md-9 well">
+				<a id="songlists">
+				<h2>Custom Song Lists</h2></a>
+				<h4>Upload a custom list of songs for party-goers to choose from, or use one of our standard lists. Ensure that everyone can find the song that they're looking for.</h4>
+			</div>
+		</div>
+		<hr class="featurette-divider">
+		<div class="row">
+			<div class="col-xs-12 col-md-9 well">
+				<a id="branding">
+				<h2>Custom Branding</h2></a>
+				<h4>Unique URL to advertise. Custom images for the event, or even a link to your personal website</h4>
+			</div>
+			<div class="col-xs-12 col-md-3">
+				<img data-src="holder.js/171x180" src="/img/brand.png" alt="...">
+			</div>
+		</div>
+		<hr class="featurette-divider">
+		<div class="row">
+			<div class="col-xs-12 col-md-3">
+				<img data-src="holder.js/171x180" src="/img/features.png" alt="...">
+			</div>
+			<div class="col-xs-12 col-md-9 well">
+				<a id="features">
+				<h2>New Features</h2></a>
+				<h4>We're constantly innovating to come up with new ways to improve your customer's experience. Let's us know what we can do to support your business.</h4>
+			</div>
+		</div>
 	</div>
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
