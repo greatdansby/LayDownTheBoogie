@@ -33,9 +33,9 @@
 			<li><a href="#branding">Branding</a></li>   
 			<li><a href="#features">New Features</a></li>  			
           </ul>
-          <form id="DJSignIn" class="navbar-form navbar-right" method=POST>
+          <form id="DJSignIn" name="DJSignIn" class="navbar-form navbar-right" method=POST>
             <div class="form-group">
-              <input id="username" type="text" placeholder="Username" class="form-control" onChange="$('DJSignIn').attr('action','/'+this.value()+'/DJDashboard.php');">
+              <input id="username" type="text" placeholder="Username" class="form-control" onChange="$('#DJSignIn').attr('action','/'+this.value+'/DJDashboard.php');">
             </div>
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control" id="pw" name="pw">

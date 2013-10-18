@@ -32,7 +32,7 @@ $Name = $_GET["Name"];
 			  <a href="#" class=thumbnail><img data-src="holder.js/171x180" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=<?echo urlencode("http:/.com/$Name");?>" alt="..."></a>
 			  <div class="caption">
 				<h3>Advertise</h3>
-				<p>Use the custom QR code above to advertise your site and direct customers to request songs. Or give them your URL: <h4><a href="<?echo "http:/.com/$Name";?>"><?echo "http:/.com/$Name";?></a></h4></p>
+				<p>Use the custom QR code above to advertise your site and direct customers to request songs. Or give them your URL: <h4><a href="<?echo "http://laydowntheboogie.com/$Name";?>"><?echo "http://LayDownTheBoogie.com/$Name";?></a></h4></p>
 			  </div>
 			</div>
 		  </div>
@@ -41,7 +41,7 @@ $Name = $_GET["Name"];
 			  <a href="#" class=thumbnail><img data-src="holder.js/171x180"  src="/img/list.png" alt="..."></a>
 			  <div class="caption">
 				<h3>DJ Dashboard</h3>
-				<p>Manage your requests and change your settings via the DJ dashboard. Use your password to gain access.<h4><a href="<?echo "http:/.com/$Name/DJDashboard.php";?>"><?echo "http:/.com/$Name/DJDashboard.php";?></a></p>
+				<p>Manage your requests and change your settings via the DJ dashboard. Use your password to gain access.<h4><a href="<?echo "http://laydowntheboogie.com/$Name/DJDashboard.php";?>"><?echo "http://LayDownTheBoogie.com/$Name/DJDashboard.php";?></a></p>
 			  </div>
 			</div>
 		  </div>
