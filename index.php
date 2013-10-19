@@ -70,7 +70,7 @@
 			</div>
 			<div class="col-xs-12 col-md-4">
 				<h1 class=white>Take it for a Test Drive</h1>
-				<h4>Scan the QR code to see the live app on your phone. Or click here to see the app side-by-side with the DJ Dashboard.</h4>
+				<h4>Scan the QR code to see the live app on your phone. Or <a href="demo.php">click here</a> to see the app side-by-side with the DJ Dashboard.</h4>
 				<a href="http://laydowntheboogie.com/Template" class=thumbnail><img data-src="holder.js/171x180" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://laydowntheboogie.com/Template" alt="..."></a>
 			</div>
 		</div>
