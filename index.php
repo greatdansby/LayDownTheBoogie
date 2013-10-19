@@ -6,11 +6,11 @@
 		<title>Lay Down the Boogie</title>
 		<!-- Bootstrap -->
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-			<link href="/css/iOS.css" rel="stylesheet">
-			<script src="/js/jquery.js"></script> 
-			<script src="/bootstrap/js/bootstrap.min.js"></script>
-			<script src="/js/gatracking.js"></script>
+			<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+			<link href="css/iOS.css" rel="stylesheet">
+			<script src="js/jquery.js"></script> 
+			<script src="bootstrap/js/bootstrap.min.js"></script>
+			<script src="js/gatracking.js"></script>
 			<link rel="icon" href="favicon.ico" type="image/x-icon"> 
 			<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
 	</head>
@@ -35,7 +35,7 @@
           </ul>
           <form id="DJSignIn" name="DJSignIn" class="navbar-form navbar-right" method=POST>
             <div class="form-group">
-              <input id="username" type="text" placeholder="Username" class="form-control" onChange="$('#DJSignIn').attr('action','/'+lcase(this.value)+'/djdashboard.php');">
+              <input id="username" type="text" placeholder="Username" class="form-control" onChange="$('#DJSignIn').attr('action',lcase(this.value)+'/djdashboard.php');">
             </div>
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control" id="pw" name="pw">
@@ -47,7 +47,7 @@
     </div>
 	<div class="jumbotron">
       <div class="container">
-        <img src="/img/logo.png" class="img-responsive" alt="Responsive logo">
+        <img src="img/logo.png" class="img-responsive" alt="Responsive logo">
         <p>Lay Down the Boogie is a way for DJs to allow guests to request songs using their smartphone. As a DJ, you can manage your request queue, capture guest information and advertise your business in a new way.</p>
       </div>
 	  
