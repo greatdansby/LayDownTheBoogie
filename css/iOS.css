@@ -6,4 +6,8 @@ background-color:#057D9F;}
 .btn-margin{
 	margin-top:5px;
 	margin-bottom:5px;}
+.featurette-divider {
+	margin: 50px 0; /* Space out the Bootstrap <hr> more */}
+.white{
+	color:#FFFFFF;}
 	
