@@ -83,14 +83,14 @@
 				<h4>Lay Down the Boogie is entirely web-based using responsive HTML5. This means it'll adapt to any smartphone, providing a great user experience.</h4>
 			</div>
 			<div class="col-xs-12 col-md-3">
-				<img data-src="holder.js/171x180" src="/img/noapp.png" alt="...">
+				<img src="img/noapp.png" alt="...">
 			</div>
 		</div>
 		<a id="songlists"></a>
 		<hr class="featurette-divider">
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
-				<img src="/img/demo_songs.png" alt="...">
+				<img src="img/demo_songs.png" alt="...">
 			</div>
 			<div class="col-xs-12 col-md-9">				
 				<h1 class=white>Custom Song Lists</h1>
@@ -105,14 +105,14 @@
 				<h4>Unique URL to advertise. Custom images for the event, or even a link to your personal website.</h4>
 			</div>
 			<div class="col-xs-12 col-md-3">
-				<img src="/img/demo_dashboard.png" alt="...">
+				<img src="img/demo_dashboard.png" alt="...">
 			</div>
 		</div>
 		<a id="features"></a>
 		<hr class="featurette-divider">
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
-				<img data-src="holder.js/171x180" src="/img/features.png" alt="...">
+				<img src="img/features.png" alt="...">
 			</div>
 			<div class="col-xs-12 col-md-9">				
 				<h1 class=white>New Features</h1>
