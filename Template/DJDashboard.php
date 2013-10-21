@@ -5,7 +5,6 @@ if (!$con)
   die('Could not connect: ' . mysqli_error());
   }
 
-//mysqli_select_db("tinysheets", $con);
 $username = $_GET["Username"];
 $contact = $_GET["Contact"];
 $path = getcwd();
