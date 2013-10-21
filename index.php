@@ -70,8 +70,8 @@
 			</div>
 			<div class="col-xs-12 col-md-4">
 				<h1 class=white>Take it for a Test Drive</h1>
-				<h4>Scan the QR code to see the live app on your phone. Or <a href="Template/DJDashboard.php">click here</a> to see the DJ Dashboard (password is TESTDRIVE).</h4>
-				<a href="http://laydowntheboogie.com/Template" class=thumbnail><img data-src="holder.js/171x180" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://laydowntheboogie.com/Template" alt="..."></a>
+				<h4>Scan the QR code to see the live app on your phone. Or <a href="template/DJDashboard.php">click here</a> to see the DJ Dashboard (password is TESTDRIVE).</h4>
+				<a href="http://laydowntheboogie.com/template" class=thumbnail><img data-src="holder.js/171x180" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://laydowntheboogie.com/template" alt="..."></a>
 			</div>
 		</div>
 		<a id="noapp"></a>
@@ -90,7 +90,7 @@
 		<hr class="featurette-divider">
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
-				<img data-src="holder.js/171x180"  src="/img/list.png" alt="...">
+				<img src="/img/demo_songs.png" alt="...">
 			</div>
 			<div class="col-xs-12 col-md-9">				
 				<h1 class=white>Custom Song Lists</h1>
@@ -105,7 +105,7 @@
 				<h4>Unique URL to advertise. Custom images for the event, or even a link to your personal website.</h4>
 			</div>
 			<div class="col-xs-12 col-md-3">
-				<img data-src="holder.js/171x180" src="/img/brand.png" alt="...">
+				<img src="/img/demo_dashboard.png" alt="...">
 			</div>
 		</div>
 		<a id="features"></a>
