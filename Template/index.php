@@ -7,17 +7,17 @@ $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 		<title>Lay Down the Boogie - <?echo $dj?></title>
 		<!-- Bootstrap -->
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-			<link href="/css/iOS.css" rel="stylesheet">
-			<script src="/js/jquery.js"></script> 
-			<script src="/bootstrap/js/bootstrap.min.js"></script>
-			<script src="/js/gatracking.js"></script>
+			<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+			<link href="css/iOS.css" rel="stylesheet">
+			<script src="js/jquery.js"></script> 
+			<script src="bootstrap/js/bootstrap.min.js"></script>
+			<script src="js/gatracking.js"></script>
 	</head>
 	<body>
     <div class="container" style="margin-top:10px;">
 		<div class="row">
 			<div class="col-xs-12">
-				<img src="/img/logo.png" class="img-responsive" alt="Responsive logo">
+				<img src="img/logo.png" class="img-responsive" alt="Responsive logo">
 			</div>
 		</div>
 		<div class="row">
@@ -30,7 +30,7 @@ $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<img src="/img/<?echo $dj;?>.png" class="img-responsive" alt="Custom logo">
+				<img src="img/<?echo $dj;?>.png" class="img-responsive" alt="Custom logo">
 			</div>
 		</div>
 	</div>
