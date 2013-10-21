@@ -4,7 +4,6 @@ if (!$con)
   {
   die('Could not connect: ' . mysqli_error());
   }
-
 $username = $_GET["Username"];
 $contact = $_GET["Contact"];
 $path = getcwd();
