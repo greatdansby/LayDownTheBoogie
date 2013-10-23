@@ -102,7 +102,7 @@ function loadArray($result,$columns){
 	</nav>
     <div class="container" style="margin-top:40px;" data-toggle="collapse">
 		<div class="page-header">
-			<h1>Requested Songs<small>Sorted by number of requests</small></h1>
+			<h1>Requested Songs <small>Sorted by number of requests</small></h1>
 		</div>
 		<div class="panel-group" id="accordion">
   <?	
