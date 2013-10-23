@@ -12,11 +12,11 @@ $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 		<title>Lay Down the Boogie - <?echo $dj;?></title>
 		<!-- Bootstrap -->
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-			<link href="css/iOS.css" rel="stylesheet">
-			<script src="js/jquery.js"></script> 
-			<script src="bootstrap/js/bootstrap.min.js"></script>
-			<script src="js/gatracking.js"></script>
+			<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+			<link href="../css/iOS.css" rel="stylesheet">
+			<script src="../js/jquery.js"></script> 
+			<script src="../bootstrap/js/bootstrap.min.js"></script>
+			<script src="../js/gatracking.js"></script>
 	</head>
 	<body>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
