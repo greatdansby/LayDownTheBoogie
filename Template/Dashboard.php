@@ -40,12 +40,12 @@ echo $username;
 		<div class=row></div>
 		<div class="row">
 			<div class="col-xs-12">
-				<a class="btn btn-block btn-lg btn-boogie btn-margin" id="submitbtn" href="SongsByName.php?Username=<? echo $Username?>&Contact=<?echo $contact;?>">Songs by Title<i class="icon-chevron-right pull-right"></i></a>
+				<a class="btn btn-block btn-lg btn-boogie btn-margin" id="submitbtn" href="SongsByName.php?Username=<? echo $username?>&Contact=<?echo $contact;?>">Songs by Title<i class="icon-chevron-right pull-right"></i></a>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<a class="btn btn-block btn-lg btn-boogie btn-margin" id="submitbtn" href="SongsByArtist.php?Username=<? echo $Username?>&Contact=<?echo $contact;?>">Songs by Artist<i class="icon-chevron-right pull-right"></i></a>
+				<a class="btn btn-block btn-lg btn-boogie btn-margin" id="submitbtn" href="SongsByArtist.php?Username=<? echo $username?>&Contact=<?echo $contact;?>">Songs by Artist<i class="icon-chevron-right pull-right"></i></a>
 			</div>
 		</div>
 <?/*
@@ -56,7 +56,7 @@ echo $username;
 		</div>*/?>
 		<div class="row">
 			<div class="col-xs-12">
-				<a class="btn btn-block btn-lg btn-warning btn-margin" id="submitbtn" href="Queue.php?Username=<? echo $Username?>&Contact=<?echo $contact;?>">See Current Requests<i class="icon-chevron-right pull-right"></i></a>
+				<a class="btn btn-block btn-lg btn-warning btn-margin" id="submitbtn" href="Queue.php?Username=<? echo $username?>&Contact=<?echo $contact;?>">See Current Requests<i class="icon-chevron-right pull-right"></i></a>
 			</div>
 		</div>
 	</div>
