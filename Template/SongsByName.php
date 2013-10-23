@@ -58,7 +58,7 @@ foreach($songs as $song) {
 ?>
 		<div class="row">
 			<div class="col-xs-12">
-				<a class="btn btn-block btn-lg btn-default" id="submitbtn" href="RequestSong.php?Song=<?echo urlencode($song['SongTitle'])."&Artist=".urlencode($song['SongArtist'])."&Username=".$Username."&Contact=".$Contact;?>"><?echo $song['SongTitle'];?><br><small><?echo $song['SongArtist'];?></small></a>
+				<a class="btn btn-block btn-lg btn-default" id="submitbtn" href="RequestSong.php?Song=<?echo urlencode($song['SongTitle'])."&Artist=".urlencode($song['SongArtist'])."&Username=".$username."&Contact=".$contact;?>"><?echo $song['SongTitle'];?><br><small><?echo $song['SongArtist'];?></small></a>
 			</div>
 		</div>
 <?
