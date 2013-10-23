@@ -22,7 +22,7 @@ $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	  <div class="navbar-header">
 		<a class="navbar-brand" href="#">Enter Note to Dj</a>
-		<a type="button" class="btn btn-default navbar-btn pull-right" href="Dashboard.php?Username=<?echo $username;?>&Contact=<?echo $sontact;?>">Back</a>
+		<a type="button" class="btn btn-default navbar-btn pull-right" href="Dashboard.php?Username=<?echo $username;?>&Contact=<?echo $contact;?>">Back</a>
 	  </div>
 	</nav>
     <div class="container" style="margin-top:40px;">
