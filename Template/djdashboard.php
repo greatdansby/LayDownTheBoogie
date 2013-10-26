@@ -97,6 +97,9 @@ function loadArray($result,$columns){
 				<input type="password" name="pw" class="form-control" placeholder="Password" value='<?echo $pw;?>'>
 			</div>
 			<button type="submit" class="btn btn-default" name="login" id="login">Login</button>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Song Lists & Settings</a></li>
+			</ul>
 		</form>
 	  </div>
 	</nav>
