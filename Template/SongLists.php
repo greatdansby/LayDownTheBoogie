@@ -86,7 +86,7 @@ function loadArray($result,$columns){
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 			<link href="../css/iOS.css" rel="stylesheet">
-			<script src="../js/jquery.js"></script> 
+			 
 			<script src="../bootstrap/js/bootstrap.min.js"></script>
 			<script src="../js/gatracking.js"></script>
 			<script type="text/javascript">
@@ -131,7 +131,7 @@ function loadArray($result,$columns){
 
 		<form action="SongLists.php" method="post" enctype="multipart/form-data" name="form1" id="form1"> 
 		  Choose your file: <br> 
-		  <input type="file"> 
+		  <input type="file" name="files[]"> 
 		  <input type="submit" name="Submit" value="Upload"> 
 		</form>
 	</div>
