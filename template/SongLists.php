@@ -90,6 +90,9 @@ function loadArray($result,$columns){
 			<script src="../bootstrap/js/bootstrap.min.js"></script>
 			<script src="../js/gatracking.js"></script>
 			<script type="text/javascript">
+			$().ready(function() {
+				$("input[type=file]").fileinput();
+			});
 				function setStatus(Title, Artist,Status){
 					$.ajax({
 						url: 'update.php',
