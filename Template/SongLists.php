@@ -86,7 +86,7 @@ function loadArray($result,$columns){
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 			<link href="../css/iOS.css" rel="stylesheet">
-			 
+			<script src="../js/jquery.js"></script> 
 			<script src="../bootstrap/js/bootstrap.min.js"></script>
 			<script src="../js/gatracking.js"></script>
 			<script type="text/javascript">
