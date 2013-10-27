@@ -91,6 +91,7 @@ function loadArray($result,$columns){
 			<script src="../js/gatracking.js"></script>
 			<script type="text/javascript">
 				//$(".collapse").collapse();
+				jQuery.noConflict();
 				function setStatus(Title, Artist,Status){
 					$.ajax({
 						url: 'update.php',
