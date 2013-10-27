@@ -99,7 +99,8 @@ function loadArray($result,$columns){
 			<button type="submit" class="btn btn-default" name="login" id="login">Login</button>
 		</form>
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Song Lists & Settings</a></li>
+			<li class="active"><a href="#">Requested Songs</a></li>
+			<li><a href="SongLists.php">Song Lists & Settings</a></li>
 		</ul>
 	  </div>
 	</nav>
