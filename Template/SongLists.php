@@ -10,6 +10,27 @@ if (!$con)
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 echo $dj;
+if(isset($_POST['pw'])){
+$pw = $_POST['pw'];
+$sql = "SELECT DJ, PW FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
+$result = mysqli_query($con,$sql);
+if(mysqli_num_rows($result)==1){
+$sql="SELECT ListName, ShowGenre, AvailableList, SongCount FROM SongLists WHERE DJ = '$dj' Order By ListName";
+$songlists = loadArray(mysqli_query($con, $sql),array('ListName', 'ShowGenre', 'AvailableList', 'SongCount'));
+} else {
+echo "<div class='alert alert-block alert-danger fade in'>
+        <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+        <h4>Password incorrect</h4>
+        <p>Please check your password and try again.</p>
+      </div>";}
+}else {
+echo "<div class='alert alert-block alert-info fade in'>
+        <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+        <h4>Please enter your password above</h4>
+        <p>E-mail info@LayDownTheBoogie.com if you have any issues or need to reset your password.</p>
+      </div>";
+}
+
 
 
 function loadArray($result,$columns){
