@@ -130,9 +130,9 @@ function loadArray($result,$columns){
 		<?php if (!empty($_GET[success])) { echo "<b>Your file has been imported.</b><br><br>"; } //generic success notice ?> 
 
 		<form action="SongLists.php" method="post" enctype="multipart/form-data" name="form1" id="form1"> 
-		  Choose your file: <br /> 
-		  <input name="csv" type="file" id="csv"> 
-		  <input type="submit" name="Submit" value="Upload" /> 
+		  Choose your file: <br> 
+		  <input type="file"> 
+		  <input type="submit" name="Submit" value="Upload"> 
 		</form>
 	</div>
 	</body>
