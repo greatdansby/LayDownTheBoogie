@@ -9,7 +9,7 @@ if (!$con)
 
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
-
+$songlist = $_POST['songlist'];
 if(isset($_POST['pw'])){
 $pw = $_POST['pw'];
 $sql = "SELECT DJ, PW FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
@@ -86,6 +86,7 @@ function loadArray($result,$columns){
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 			<link href="../css/iOS.css" rel="stylesheet">
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
 			<script src="../js/gatracking.js"></script>
 			<script type="text/javascript">
 				function setStatus(Title, Artist,Status){
@@ -127,12 +128,11 @@ function loadArray($result,$columns){
 		<?php if (!empty($_GET[success])) { echo "<b>Your file has been imported.</b><br><br>"; } //generic success notice ?> 
 
 		<form action="SongLists.php" method="post" enctype="multipart/form-data" name="form1" id="form1"> 
+		Name of song list: <input id=songlist name=songlist type=text>
 		  Choose your file: <br> 
 		  <input type="file" id="csv"> 
 		  <input type="submit" name="Submit" value="Upload"> 
 		</form>
 	</div>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
-	
 	</body>
 </html> 
