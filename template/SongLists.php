@@ -24,11 +24,11 @@ echo "<div class='alert alert-block alert-danger fade in'>
         <p>Please check your password and try again.</p>
       </div>";}
 }else {
-echo "<div class='alert alert-block alert-info fade in'>
+/*echo "<div class='alert alert-block alert-info fade in'>
         <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
         <h4>Please enter your password above</h4>
         <p>E-mail info@LayDownTheBoogie.com if you have any issues or need to reset your password.</p>
-      </div>";
+      </div>";*/
 }
 
 if ($_FILES['size'] > 0) { 
@@ -54,7 +54,7 @@ if ($_FILES['size'] > 0) {
         } 
     } while ($data = fgetcsv($handle,1000,",","'")); 
     // 
-	header('Location: import.php?success=1'); die; 
+	header('Location: SongLists.php?success=1'); die; 
     
 
 }
