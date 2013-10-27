@@ -9,7 +9,7 @@ if (!$con)
 
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
-echo $dj;
+
 if(isset($_POST['pw'])){
 $pw = $_POST['pw'];
 $sql = "SELECT DJ, PW FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
@@ -33,6 +33,29 @@ echo "<div class='alert alert-block alert-info fade in'>
 
 if ($_FILES['size'] > 0) { 
 
+    //get the csv file 
+    $file = $_FILES['tmp_name']; 
+    $handle = fopen($file,"r"); 
+     
+    //loop through the csv file and insert into database 
+    do { 
+        if ($data[0]) { 
+            mysql_query("INSERT INTO CustomLists (DJ, SongList, SongTitle, SongArtist, SongGenre, Status) VALUES 
+                ( 
+                    '".$dj."',
+					'".$songlist."',
+					'".addslashes($data[0])."', 
+                    '".addslashes($data[1])."', 
+                    '".addslashes($data[2])."',
+					'"Active"',					
+                ) 
+            "); 
+        } 
+    } while ($data = fgetcsv($handle,1000,",","'")); 
+    // 
+
+    //redirect 
+    header('Location: SongLists.php?success=1'); die; 
 
 }
 
