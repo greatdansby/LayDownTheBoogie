@@ -31,7 +31,7 @@ echo "<div class='alert alert-block alert-danger fade in'>
       </div>";*/
 }
 
-if ($_FILES['size'] > 0) { 
+if ($_FILES['csv']['size'] > 0) { 
 
     //get the csv file 
     $file = $_FILES['csv']['tmp_name']; 
