@@ -43,7 +43,7 @@ if ($_FILES[csv][size] > 0) {
     do { 
         if ($data[0]) { 
 			echo "1 row inserted";
-            mysql_query("INSERT INTO CustomLists (DJ, SongList, SongTitle, SongArtist, SongGenre, Status) VALUES 
+            $sql=("INSERT INTO CustomLists (DJ, SongList, SongTitle, SongArtist, SongGenre, Status) VALUES 
                 ( 
                     '".$dj."',
 					'".$songlist."',
@@ -53,6 +53,8 @@ if ($_FILES[csv][size] > 0) {
 					'Active'				
                 ) 
             "); 
+			echo $sql;
+			mysql_query($sql);
         } 
     } while ($data = fgetcsv($handle,1000,",","'")); 
     // 
