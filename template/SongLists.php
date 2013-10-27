@@ -47,7 +47,7 @@ if ($_FILES['size'] > 0) {
 					'".addslashes($data[0])."', 
                     '".addslashes($data[1])."', 
                     '".addslashes($data[2])."',
-					'"Active"'				
+					'Active'				
                 ) 
             "); 
         } 
