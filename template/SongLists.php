@@ -30,12 +30,12 @@ echo "<div class='alert alert-block alert-danger fade in'>
         <p>E-mail info@LayDownTheBoogie.com if you have any issues or need to reset your password.</p>
       </div>";*/
 }
-echo "Load file";
-echo  "Size".$_FILES[csv][size];
-echo "Size".$_FILES['csv']['size'];
+echo "Load file<br>";
+echo  "Size".$_FILES[csv][size]."<br>";
+echo "Size".$_FILES['csv']['size']."<br>";
 if ($_FILES[csv][size] > 0) { 
 
-    echo "get the csv file"; 
+    echo "get the csv file"."<br>"; 
     $file = $_FILES[csv][tmp_name]; 
     $handle = fopen($file,"r"); 
     //$data = fgetcsv($handle,1000,",","'");
