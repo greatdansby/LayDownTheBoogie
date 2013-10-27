@@ -11,6 +11,7 @@ $username = $_GET["Username"];
 $contact = $_GET["Contact"];
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
+echo $dj;
 if(isset($_POST['pw'])){
 $pw = $_POST['pw'];
 $sql = "SELECT DJ, PW FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
