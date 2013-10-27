@@ -6,9 +6,7 @@ if (!$con)
   {
   die('Could not connect: ' . mysqli_error());
   } 
-// 
-$username = $_GET["Username"];
-$contact = $_GET["Contact"];
+
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 echo $dj;
