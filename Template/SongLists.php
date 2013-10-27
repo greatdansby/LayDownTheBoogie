@@ -133,7 +133,7 @@ function loadArray($result,$columns){
 		<form action="SongLists.php" method="post" enctype="multipart/form-data" name="form1" id="form1"> 
 		Name of song list: <input id=songlist name=songlist type=text>
 		  Choose your file: <br> 
-		  <input type="file" id="csv"> 
+		  <input type="file" id="csv" name="csv"> 
 		  <input type="submit" name="Submit" value="Upload"> 
 		</form>
 	</div>
