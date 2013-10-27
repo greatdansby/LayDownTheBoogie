@@ -34,7 +34,7 @@ echo "<div class='alert alert-block alert-info fade in'>
 if ($_FILES['size'] > 0) { 
 
     //get the csv file 
-    $file = $_FILES['tmp_name']; 
+    $file = $_FILES['csv']['tmp_name']; 
     $handle = fopen($file,"r"); 
      
     //loop through the csv file and insert into database 
