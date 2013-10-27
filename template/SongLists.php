@@ -90,8 +90,6 @@ function loadArray($result,$columns){
 			<script src="../bootstrap/js/bootstrap.min.js"></script>
 			<script src="../js/gatracking.js"></script>
 			<script type="text/javascript">
-				//$(".collapse").collapse();
-				jQuery.noConflict();
 				function setStatus(Title, Artist,Status){
 					$.ajax({
 						url: 'update.php',
@@ -132,8 +130,8 @@ function loadArray($result,$columns){
 
 		<form action="SongLists.php" method="post" enctype="multipart/form-data" name="form1" id="form1"> 
 		  Choose your file: <br> 
-		  <input type="file" name="files[]"> 
-		  <input type="submit" name="Submit" value="Upload"> 
+		  <input type="file" id="csv"> 
+		  <input type="submit" name="Submit" value="Upload" onClick="$('#csv').trigger('click');"> 
 		</form>
 	</div>
 	</body>
