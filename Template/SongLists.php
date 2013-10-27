@@ -54,7 +54,7 @@ if ($_FILES[csv][size] > 0) {
                 ) 
             "); 
 			echo $sql;
-			mysql_query($sql);
+			if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
         } 
     } while ($data = fgetcsv($handle,1000,",","'")); 
     // 
