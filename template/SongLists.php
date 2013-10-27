@@ -56,7 +56,7 @@ if ($_FILES[csv][size] > 0) {
         } 
     } while ($data = fgetcsv($handle,1000,",","'")); 
     // 
-	header('Location: SongLists.php?success=1'); die; 
+	//header('Location: SongLists.php?success=1'); die; 
     
 
 }
