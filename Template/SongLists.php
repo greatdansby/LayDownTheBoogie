@@ -86,7 +86,8 @@ function loadArray($result,$columns){
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 			<link href="../css/iOS.css" rel="stylesheet">
-			
+			<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script> 
+			<script src="../bootstrap/js/bootstrap.min.js"></script>
 			<script src="../js/gatracking.js"></script>
 			<script type="text/javascript">
 				function setStatus(Title, Artist,Status){
@@ -133,7 +134,5 @@ function loadArray($result,$columns){
 		  <input type="submit" name="Submit" value="Upload"> 
 		</form>
 	</div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
-	<script src="../bootstrap/js/bootstrap.min.js"></script>
 	</body>
 </html> 
