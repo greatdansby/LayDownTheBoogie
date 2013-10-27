@@ -133,6 +133,6 @@ function loadArray($result,$columns){
 		</form>
 	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
-	<script src="../bootstrap/js/bootstrap.min.js"></script>
+	
 	</body>
 </html> 
