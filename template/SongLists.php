@@ -40,6 +40,7 @@ if ($_FILES['size'] > 0) {
     //loop through the csv file and insert into database 
     do { 
         if ($data[0]) { 
+			echo "1 row inserted";
             mysql_query("INSERT INTO CustomLists (DJ, SongList, SongTitle, SongArtist, SongGenre, Status) VALUES 
                 ( 
                     '".$dj."',
@@ -53,7 +54,7 @@ if ($_FILES['size'] > 0) {
         } 
     } while ($data = fgetcsv($handle,1000,",","'")); 
     // 
-
+	header('Location: import.php?success=1'); die; 
     
 
 }
