@@ -36,7 +36,7 @@ if ($_FILES['size'] > 0) {
     //get the csv file 
     $file = $_FILES['csv']['tmp_name']; 
     $handle = fopen($file,"r"); 
-    $data = fgetcsv($handle,1000,",","'");
+    //$data = fgetcsv($handle,1000,",","'");
     //loop through the csv file and insert into database 
     do { 
         if ($data[0]) { 
@@ -47,7 +47,7 @@ if ($_FILES['size'] > 0) {
 					'".addslashes($data[0])."', 
                     '".addslashes($data[1])."', 
                     '".addslashes($data[2])."',
-					'"Active"',					
+					'"Active"'				
                 ) 
             "); 
         } 
