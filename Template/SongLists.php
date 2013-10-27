@@ -30,8 +30,7 @@ echo "<div class='alert alert-block alert-info fade in'>
         <p>E-mail info@LayDownTheBoogie.com if you have any issues or need to reset your password.</p>
       </div>";
 }
-if (count($_FILES)>0){
-if ($_FILES[csv][size] > 0) { 
+if ($_FILES['size'] > 0) { 
 
     //get the csv file 
     $file = $_FILES[csv][tmp_name]; 
