@@ -63,7 +63,7 @@ if ($_FILES[csv][size] > 0) {
         } 
     } while ($data = fgetcsv($handle,1000,",","'")); 
     // 
-	//header('Location: SongLists.php?success=1'); die; 
+	header('Location: SongLists.php?success=1'); die; 
 }
 
 function loadArray($result,$columns){
@@ -120,7 +120,7 @@ function loadArray($result,$columns){
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="navbar-header">
 		<a class="navbar-brand" href="#">DJ Dashboard</a>
-		<? if($loggedin){
+		<?php if($loggedin){
 		echo '<div class="nav navbar-nav">'.$dj.'</div>';
 		} else {
 		echo '
@@ -143,7 +143,7 @@ function loadArray($result,$columns){
 		<div class="col-xs-12 col-md-6">
 			<div class="col-xs-12 col-md-12">
 				<h1 class=white>Upload Custom Artwork</h1>
-				<h4>Image will be displayed at http://www.laydowntheboogie.com/<?echo $dj;?> and will be scaled to fit the screen. The following formats are supported: JPG, PNG<i>(recommended)</i>, GIF, BMP</h4>
+				<h4>Image will be displayed at http://www.laydowntheboogie.com/<?php echo $dj;?> and will be scaled to fit the screen. The following formats are supported: JPG, PNG<i>(recommended)</i>, GIF, BMP</h4>
 				<form action="SongLists.php" method="post" enctype="multipart/form-data" name="artwork" id="artwork"> 
 					Choose your file: <br> 
 					<input type="file" id="art" name="art"> 
