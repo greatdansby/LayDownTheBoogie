@@ -120,16 +120,7 @@ function loadArray($result,$columns){
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="navbar-header">
 		<a class="navbar-brand" href="#">DJ Dashboard</a>
-		<?php if($loggedin){
-		echo '<div class="nav navbar-nav">'.$dj.'</div>';
-		} else {
-		echo '
-		<form class="navbar-form navbar-left" role="search" method=post action=SongLists.php id="frm1">
-			<div class="form-group">
-				<input type="password" name="pw" class="form-control" placeholder="Password">
-			</div>
-			<button type="submit" class="btn btn-default" name="login" id="login">Login</button>
-		</form>';}?>
+		
 		<ul class="nav navbar-nav">
 			<li><a href="DJDashboard.php">Requested Songs</a></li>
 			<li class="active"><a href="#">Song Lists & Settings</a></li>
