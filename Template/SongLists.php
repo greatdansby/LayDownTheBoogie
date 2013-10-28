@@ -128,9 +128,7 @@ function loadArray($result,$columns){
 	  </div>
 	</nav>
     <div class="container" style="margin-top:40px;" data-toggle="collapse">
-		<?php if (!empty($_GET[success])) { echo "<div class='alert alert-block alert-info fade in'>
-        <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-        <h4>Your file has been uploaded successfully.</h4></div>"; } //generic success notice ?> 
+
 		<div class="col-xs-12 col-md-6">
 			<div class="col-xs-12 col-md-12">
 				<h1 class=white>Upload Custom Artwork</h1>
