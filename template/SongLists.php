@@ -6,15 +6,18 @@ if (!$con)
   {
   die('Could not connect: ' . mysqli_error());
   } 
-
+$loggedin=false;
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 $songlist = $_POST['songlist'];
 if(isset($_POST['pw'])){
 $pw = $_POST['pw'];
-$sql = "SELECT DJ, PW FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
+$sql = "SELECT DJ FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
 $result = mysqli_query($con,$sql);
 if(mysqli_num_rows($result)==1){
+$loggedin=true;
+$sql = "UPDATE DJs SET LastIP = '.$_SERVER['REMOTE_ADDR'].' WHERE DJ='$dj'";
+if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 $sql="SELECT ListName, ShowGenre, AvailableList, SongCount FROM SongLists WHERE DJ = '$dj' Order By ListName";
 $songlists = loadArray(mysqli_query($con, $sql),array('ListName', 'ShowGenre', 'AvailableList', 'SongCount'));
 } else {
@@ -24,25 +27,27 @@ echo "<div class='alert alert-block alert-danger fade in'>
         <p>Please check your password and try again.</p>
       </div>";}
 }else {
+$sql = "SELECT DJ FROM DJs WHERE DJ='$dj' AND LastIP='".$_SERVER['REMOTE_ADDR']."'";
+$result = mysqli_query($con,$sql);
+if(mysqli_num_rows($result)==1){
+$loggedin=true;
 /*echo "<div class='alert alert-block alert-info fade in'>
         <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
         <h4>Please enter your password above</h4>
         <p>E-mail info@LayDownTheBoogie.com if you have any issues or need to reset your password.</p>
       </div>";*/
-}
-echo "Load file<br>";
-echo  "Size".$_FILES[csv][size]."<br>";
-echo "Size".$_FILES['csv']['size']."<br>";
+}}
+
 if ($_FILES[csv][size] > 0) { 
 
-    echo "get the csv file"."<br>"; 
+    //echo "get the csv file"."<br>"; 
     $file = $_FILES[csv][tmp_name]; 
     $handle = fopen($file,"r"); 
     //$data = fgetcsv($handle,1000,",","'");
     //loop through the csv file and insert into database 
     do { 
         if ($data[0]) { 
-			echo "1 row inserted";
+			//echo "1 row inserted";
             $sql=("INSERT INTO CustomLists (DJ, SongList, SongTitle, SongArtist, SongGenre, Status) VALUES 
                 ( 
                     '".$dj."',
@@ -53,14 +58,12 @@ if ($_FILES[csv][size] > 0) {
 					'Active'				
                 ) 
             "); 
-			echo $sql;
+			//echo $sql;
 			if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
         } 
     } while ($data = fgetcsv($handle,1000,",","'")); 
     // 
-	//header('Location: SongLists.php?success=1'); die; 
-    
-
+	header('Location: SongLists.php?success=1'); die; 
 }
 
 function loadArray($result,$columns){
@@ -114,30 +117,62 @@ function loadArray($result,$columns){
 			</script>
 	</head>
 	<body>
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="navbar-header">
 		<a class="navbar-brand" href="#">DJ Dashboard</a>
-		<form class="navbar-form navbar-left" role="search" method=post action=DJDashboard.php id="frm1">
+		<? if($loggedin){
+		echo '<div class="nav navbar-nav">'.$dj.'</div>';
+		} else {
+		echo '
+		<form class="navbar-form navbar-left" role="search" method=post action=SongLists.php id="frm1">
 			<div class="form-group">
-				<input type="password" name="pw" class="form-control" placeholder="Password" value='<?echo $pw;?>'>
+				<input type="password" name="pw" class="form-control" placeholder="Password">
 			</div>
 			<button type="submit" class="btn btn-default" name="login" id="login">Login</button>
-		</form>
+		</form>';}?>
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Requested Songs</a></li>
-			<li><a href="SongLists.php">Song Lists & Settings</a></li>
+			<li><a href="DJDashboard.php">Requested Songs</a></li>
+			<li class="active"><a href="#">Song Lists & Settings</a></li>
 		</ul>
 	  </div>
 	</nav>
     <div class="container" style="margin-top:40px;" data-toggle="collapse">
-		<?php if (!empty($_GET[success])) { echo "<b>Your file has been imported.</b><br><br>"; } //generic success notice ?> 
-
-		<form action="SongLists.php" method="post" enctype="multipart/form-data" name="form1" id="form1"> 
-		Name of song list: <input id=songlist name=songlist type=text>
-		  Choose your file: <br> 
-		  <input type="file" id="csv" name="csv"> 
-		  <input type="submit" name="Submit" value="Upload"> 
-		</form>
+		<?php if (!empty($_GET[success])) { echo "<div class='alert alert-block alert-info fade in'>
+        <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+        <h4>Your file has been uploaded successfully.</h4></div>"; } //generic success notice ?> 
+		<div class="col-xs-12 col-md-6">
+			<div class="col-xs-12 col-md-12">
+				<h1 class=white>Upload Custom Artwork</h1>
+				<h4>Image will be displayed at http://www.laydowntheboogie.com/<?echo $dj;?> and will be scaled to fit the screen. The following formats are supported: JPG, PNG<i>(recommended)</i>, GIF, BMP</h4>
+				<form action="SongLists.php" method="post" enctype="multipart/form-data" name="artwork" id="artwork"> 
+					Choose your file: <br> 
+					<input type="file" id="art" name="art"> 
+					<input type="submit" name="Submit" value="Upload"> 
+				</form>
+			</div>
+			<div class="col-xs-12 col-md-12">
+				<h1 class=white>Lay Down the Boogie Song Lists</h1>
+			</div>
+			<div class="col-xs-12 col-md-12">
+				<h1 class=white>Custom Song Lists</h1>
+			</div>
+			<div class="col-xs-12 col-md-12">
+				<h1 class=white>Upload a Custom Song List</h1>
+				<h4>Use the format below to put your custom song list into a CSV file, and then upload it.</h4>
+				<form action="SongLists.php" method="post" enctype="multipart/form-data" name="form1" id="form1"> 
+					Name of song list: <input id=songlist name=songlist type=text>
+					Choose your file: <br> 
+					<input type="file" id="csv" name="csv"> 
+					<input type="submit" name="Submit" value="Upload"> 
+				</form>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<div class="col-xs-12 col-md-12">
+				<h1 class=white>Active Song List</h1>
+				<h4>The song list below will be what is available for your audience to choose from. Use the toggles on the right to activate/deactivate songs from the list. Click here to enable/disable custom song requests.</h4>
+			</div>
+		</div>
 	</div>
 	</body>
 </html> 
