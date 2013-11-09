@@ -11,33 +11,36 @@ $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 $songlist = $_POST['songlist'];
 if(isset($_POST['pw'])){
-$pw = $_POST['pw'];
-$sql = "SELECT DJ FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
-$result = mysqli_query($con,$sql);
-if(mysqli_num_rows($result)==1){
-$loggedin=true;
-$sql = "UPDATE DJs SET LastIP = '".$_SERVER['REMOTE_ADDR']."' WHERE DJ='$dj'";
-if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
-$sql="SELECT ListName, ShowGenre, AvailableList, SongCount, Active FROM SongLists WHERE DJ = '$dj' or DJ = 'LDTB' Order By ListName";
-$songlists = loadArray(mysqli_query($con, $sql),array('ListName', 'ShowGenre', 'AvailableList', 'SongCount', 'Active'));
-print_r($songlists);
-} else {
-echo "<div class='alert alert-block alert-danger fade in'>
-        <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-        <h4>Password incorrect</h4>
-        <p>Please check your password and try again.</p>
-      </div>";}
+	$pw = $_POST['pw'];
+	$sql = "SELECT DJ FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
+	$result = mysqli_query($con,$sql);
+	if(mysqli_num_rows($result)==1){
+		$loggedin=true;
+		$sql = "UPDATE DJs SET LastIP = '".$_SERVER['REMOTE_ADDR']."' WHERE DJ='$dj'";
+		if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
+	} else {
+		echo "<div class='alert alert-block alert-danger fade in'>
+			<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+			<h4>Password incorrect</h4>
+			<p>Please check your password and try again.</p>
+		  </div>";}
 }else {
-$sql = "SELECT DJ FROM DJs WHERE DJ='$dj' AND LastIP='".$_SERVER['REMOTE_ADDR']."'";
-$result = mysqli_query($con,$sql);
-if(mysqli_num_rows($result)==1){
-$loggedin=true;
-/*echo "<div class='alert alert-block alert-info fade in'>
-        <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-        <h4>Please enter your password above</h4>
-        <p>E-mail info@LayDownTheBoogie.com if you have any issues or need to reset your password.</p>
-      </div>";*/
-}}
+	$sql = "SELECT DJ FROM DJs WHERE DJ='$dj' AND LastIP='".$_SERVER['REMOTE_ADDR']."'";
+	$result = mysqli_query($con,$sql);
+	if(mysqli_num_rows($result)==1){
+		$loggedin=true;
+	}else{
+		echo "<div class='alert alert-block alert-info fade in'>
+			<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+			<h4>Please enter your password above</h4>
+			<p>E-mail info@LayDownTheBoogie.com if you have any issues or need to reset your password.</p>
+		  </div>";
+	}
+}
+if($loggedin=true){
+	$sql="SELECT ListName, ShowGenre, AvailableList, SongCount, Active FROM SongLists WHERE DJ = '$dj' or DJ = 'LDTB' Order By ListName";
+	$songlists = loadArray(mysqli_query($con, $sql),array('ListName', 'ShowGenre', 'AvailableList', 'SongCount', 'Active'));
+}
 
 if ($_FILES[csv][size] > 0) { 
 
