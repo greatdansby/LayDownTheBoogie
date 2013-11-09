@@ -20,6 +20,7 @@ $sql = "UPDATE DJs SET LastIP = '".$_SERVER['REMOTE_ADDR']."' WHERE DJ='$dj'";
 if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 $sql="SELECT ListName, ShowGenre, AvailableList, SongCount, Active FROM SongLists WHERE DJ = '$dj' or DJ = 'LDTB' Order By ListName";
 $songlists = loadArray(mysqli_query($con, $sql),array('ListName', 'ShowGenre', 'AvailableList', 'SongCount', 'Active'));
+print_r($songlists);
 } else {
 echo "<div class='alert alert-block alert-danger fade in'>
         <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
