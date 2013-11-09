@@ -147,7 +147,7 @@ function loadArray($result,$columns){
 		<div class="col-xs-12 col-md-6">
 			<div class="col-xs-12 col-md-12">
 				<h1 class=white>Upload Custom Artwork</h1>
-				<h4>Image will be displayed at http://www.laydowntheboogie.com/<?php echo $dj;?> and will be scaled to fit the screen. The following formats are supported: PNG</h4>
+				<h4>Image will be displayed at laydowntheboogie.com/<?php echo $dj;?> and will be scaled to fit the screen. The following formats are supported: PNG</h4>
 				<img class="img-responsive" src="../img/<? echo $dj.".png";?>">
 				<form action="SongLists.php" method="post" enctype="multipart/form-data" name="artwork" id="artwork">  
 					<input type="file" id="art" name="art"> 
@@ -155,10 +155,7 @@ function loadArray($result,$columns){
 				</form>
 			</div>
 			<div class="col-xs-12 col-md-12">
-				<h1 class=white>Lay Down the Boogie Song Lists</h1>
-			</div>
-			<div class="col-xs-12 col-md-12">
-				<h1 class=white>Custom Song Lists</h1>
+				<h1 class=white>Song Lists</h1>
 				<div class="table-responsive">
 					<table class="table table-condensed table-hover">
 						<thead><tr>
