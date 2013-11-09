@@ -18,8 +18,8 @@ if(mysqli_num_rows($result)==1){
 $loggedin=true;
 $sql = "UPDATE DJs SET LastIP = '".$_SERVER['REMOTE_ADDR']."' WHERE DJ='$dj'";
 if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
-$sql="SELECT ListName, ShowGenre, AvailableList, SongCount FROM SongLists WHERE DJ = '$dj' Order By ListName";
-$songlists = loadArray(mysqli_query($con, $sql),array('ListName', 'ShowGenre', 'AvailableList', 'SongCount'));
+$sql="SELECT ListName, ShowGenre, AvailableList, SongCount, Active FROM SongLists WHERE DJ = '$dj' or DJ = 'LDTB' Order By ListName";
+$songlists = loadArray(mysqli_query($con, $sql),array('ListName', 'ShowGenre', 'AvailableList', 'SongCount', 'Active'));
 } else {
 echo "<div class='alert alert-block alert-danger fade in'>
         <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
@@ -155,6 +155,22 @@ function loadArray($result,$columns){
 			</div>
 			<div class="col-xs-12 col-md-12">
 				<h1 class=white>Custom Song Lists</h1>
+				<div class="table-responsive">
+					<table class="table table-condensed table-hover">
+						<tr>
+							<th>List Name</th>
+							<th>Song Count</th>
+							<th>Active</th>
+						</tr>
+						<?php for($r=0;$r<count($songlists);$r++){
+							echo "<tr onClick='setActive("$songlists[$r]['ListName']"'";
+							if($songlists[$r]['Active']="True"){
+								echo " class='active'";}
+							echo "><td>".$songlists[$r]['ListName']."</td>";
+							echo "><td>".$songlists[$r]['SongCount']."</td>";
+							echo "><td>".$songlists[$r]['Active']."</td></tr>";}?>
+					</table>
+				</div>
 			</div>
 			<div class="col-xs-12 col-md-12">
 				<h1 class=white>Upload a Custom Song List</h1>

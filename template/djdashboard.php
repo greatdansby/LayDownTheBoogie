@@ -89,7 +89,7 @@ function loadArray($result,$columns){
 			</script>
 	</head>
 	<body>
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="navbar-header">
 		<a class="navbar-brand" href="#">DJ Dashboard</a>
 		<form class="navbar-form navbar-left" role="search" method=post action=DJDashboard.php id="frm1">
