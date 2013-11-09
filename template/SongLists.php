@@ -162,7 +162,9 @@ function loadArray($result,$columns){
 							<th>Song Count</th>
 							<th>Active</th>
 						</tr>
-						<?php for($r=0;$r<count($songlists);$r++){
+						<?php 
+							print_r($songlists);
+							for($r=0;$r<count($songlists);$r++){
 							echo "<tr onClick=setActive(''".$songlists[$r]['ListName'].")''";
 							if($songlists[$r]['Active']='True'){
 								echo " class='active'";}
