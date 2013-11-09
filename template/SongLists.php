@@ -147,9 +147,9 @@ function loadArray($result,$columns){
 		<div class="col-xs-12 col-md-6">
 			<div class="col-xs-12 col-md-12">
 				<h1 class=white>Upload Custom Artwork</h1>
-				<h4>Image will be displayed at http://www.laydowntheboogie.com/<?php echo $dj;?> and will be scaled to fit the screen. The following formats are supported: JPG, PNG<i>(recommended)</i>, GIF, BMP</h4>
-				<form action="SongLists.php" method="post" enctype="multipart/form-data" name="artwork" id="artwork"> 
-					Choose your file: <br> 
+				<h4>Image will be displayed at http://www.laydowntheboogie.com/<?php echo $dj;?> and will be scaled to fit the screen. The following formats are supported: PNG</h4>
+				<img class="img-responsive" src="../img/<? echo $dj.".png";?>">
+				<form action="SongLists.php" method="post" enctype="multipart/form-data" name="artwork" id="artwork">  
 					<input type="file" id="art" name="art"> 
 					<input type="submit" name="Submit" value="Upload"> 
 				</form>
@@ -161,20 +161,21 @@ function loadArray($result,$columns){
 				<h1 class=white>Custom Song Lists</h1>
 				<div class="table-responsive">
 					<table class="table table-condensed table-hover">
-						<tr>
+						<thead><tr>
 							<th>List Name</th>
 							<th>Song Count</th>
 							<th>Active</th>
-						</tr>
+						</tr></thead>
+						<tbody>
 						<?php 
-							print_r($songlists);
 							for($r=0;$r<count($songlists);$r++){
-							echo "<tr onClick=setActive(''".$songlists[$r]['ListName'].")''";
+							echo "<tr onClick=setActive('".$songlists[$r]['ListName']."')'";
 							if($songlists[$r]['Active']='True'){
-								echo " class='active'";}
+								echo " class='success'";}
 							echo "><td>".$songlists[$r]['ListName']."</td>";
 							echo "><td>".$songlists[$r]['SongCount']."</td>";
 							echo "><td>".$songlists[$r]['Active']."</td></tr>";}?>
+						</tbody>
 					</table>
 				</div>
 			</div>
