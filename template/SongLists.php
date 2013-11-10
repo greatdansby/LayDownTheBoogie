@@ -113,7 +113,6 @@ function loadArray($result,$columns){
 			<script src="../js/gatracking.js"></script>
 			<script type="text/javascript">
 				function setSongStatus(SongID, Status){
-					msgbox(SongID+Status);
 					$.ajax({
 						url: 'songupdate.php',
 						type: "POST",
