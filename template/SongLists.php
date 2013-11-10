@@ -9,7 +9,7 @@ if (!$con)
 $loggedin=false;
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
-$songlist = $_POST['songlist'];
+$listname = $_POST['listname'];
 if(isset($_POST['pw'])){
 	$pw = $_POST['pw'];
 	$sql = "SELECT DJ FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
@@ -67,7 +67,7 @@ if ($_FILES[csv][size] > 0) {
             $sql=("INSERT INTO CustomLists (DJ, SongList, SongTitle, SongArtist, SongGenre, Status) VALUES 
                 ( 
                     '".$dj."',
-					'".$songlist."',
+					'".$listname."',
 					'".addslashes($data[0])."', 
                     '".addslashes($data[1])."', 
                     '".addslashes($data[2])."',
@@ -78,10 +78,10 @@ if ($_FILES[csv][size] > 0) {
 			if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
         } 
     } while ($data = fgetcsv($handle,1000,",","'")); 
-	$sql="INSERT INTO SongLists (ListName, DJ, AvailableList, SongCount, Active) VALUES('".$songlist."', '".$dj."', 'False', ".count($data).", 'True')";
+	$sql="INSERT INTO SongLists (ListName, DJ, AvailableList, SongCount, Active) VALUES('".$listname."', '".$dj."', 'False', ".count($data).", 'True')";
 	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
     // 
-	header('Location: SongLists.php?SongList='.$songlist); die; 
+	header('Location: SongLists.php?SongList='.$listname); die; 
 }
 if ($_FILES["art"][size] > 0) {
 	$s=move_uploaded_file($_FILES["art"][tmp_name], "../img/".$dj.".png");
@@ -215,7 +215,7 @@ function loadArray($result,$columns){
 				<h4>Use the format below to put your custom song list into a CSV file, and then upload it.</h4><br>
 				<a href="../SampleList.csv">SampleList.CSV</a>
 				<form action="SongLists.php" method="post" enctype="multipart/form-data" name="form1" id="form1"> 
-					Name of song list: <input id="songlist" name="songlist" type=text >
+					Name of song list: <input id="listname" name="listname" type=text >
 					<input type="file" id="csv" name="csv"> 
 					<input type="submit" name="Submit" value="Upload"> 
 				</form>
