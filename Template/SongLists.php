@@ -129,9 +129,11 @@ function loadArray($result,$columns){
 							if($(data).hasClass("Danger")){
 								$(data).removeClass("Danger");
 								$(data).addClass("Success");
+								$(data+">td:last-of-type").html("True");
 							}else{
 								$(data).removeClass("Success");
 								$(data).addClass("Danger");
+								$(data+">td:last-of-type").html("False");
 							}
 							}
 						});
