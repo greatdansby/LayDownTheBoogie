@@ -69,6 +69,9 @@ if ($_FILES[csv][size] > 0) {
     // 
 	header('Location: SongLists.php?success=1'); die; 
 }
+if ($_FILES[png][size] > 0) {
+	move_uploaded_file($_FILES[png]["tmp_name"],
+      "../img/" . $dj.".png");}
 
 function loadArray($result,$columns){
 	$rows = array();
@@ -178,10 +181,10 @@ function loadArray($result,$columns){
 			</div>
 			<div class="col-xs-12 col-md-12">
 				<h1 class=white>Upload a Custom Song List</h1>
-				<h4>Use the format below to put your custom song list into a CSV file, and then upload it.</h4>
+				<h4>Use the format below to put your custom song list into a CSV file, and then upload it.</h4><br>
+				<a href="../SampleList.csv">SampleList.CSV</a>
 				<form action="SongLists.php" method="post" enctype="multipart/form-data" name="form1" id="form1"> 
-					Name of song list: <input id=songlist name=songlist type=text>
-					Choose your file: <br> 
+					Name of song list: <input id=songlist name=songlist type=text >
 					<input type="file" id="csv" name="csv"> 
 					<input type="submit" name="Submit" value="Upload"> 
 				</form>
@@ -190,7 +193,30 @@ function loadArray($result,$columns){
 		<div class="col-xs-12 col-md-6">
 			<div class="col-xs-12 col-md-12">
 				<h1 class=white>Active Song List</h1>
-				<h4>The song list below will be what is available for your audience to choose from. Use the toggles on the right to activate/deactivate songs from the list. Click here to enable/disable custom song requests.</h4>
+				<h4>The song list below will be what is available for your audience to choose from. Use the toggles on the right to activate/deactivate songs from the list. <br>
+				<a href="#" onClick="toggleCustom();">Click here</a> to enable/disable custom song requests.</h4>
+				<div class="table-responsive" height="400px" style="overflow:scroll">
+					<table class="table table-condensed table-hover">
+						<thead><tr>
+							<th>Artist</th>
+							<th>Title</th>
+							<th>Visible to Users</th>
+						</tr></thead>
+						<tbody>
+						<?php 
+							for($r=0;$r<count($songlist);$r++){
+							echo "<tr onClick=setActive('".$songlist[$r]['SongID']."')'";
+							if($songlists[$r]['Status']='True'){
+								echo " class='success'";
+							} else {
+								echo " class='danger'";
+							}
+							echo "><td>".$songlists[$r]['SongArtist']."</td>";
+							echo "><td>".$songlists[$r]['SongTitle']."</td>";
+							echo "><td>".$songlists[$r]['Status']."</td></tr>";}?>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
