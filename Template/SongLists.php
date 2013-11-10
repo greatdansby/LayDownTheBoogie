@@ -161,6 +161,9 @@ function loadArray($result,$columns){
 				tr:hover {
 					cursor: hand;
 				}
+				th, th:hover{
+					background-color: yellow;
+				}
 			</style>
 	</head>
 	<body>
@@ -201,12 +204,11 @@ function loadArray($result,$columns){
 				<h1 class=white>Song Lists</h1>
 				<div class="table-responsive">
 					<table class="table table-condensed table-hover">
-						<thead><tr>
+						<tbody><tr>
 							<th>List Name</th>
 							<th>Song Count</th>
 							<th>Active</th>
-						</tr></thead>
-						<tbody>
+						</tr>
 						<?php 
 							for($r=0;$r<count($songlists);$r++){
 							echo "<tr onClick=setActive('".$songlists[$r]['ListName']."')";
@@ -236,8 +238,8 @@ function loadArray($result,$columns){
 				<h4>The song list below will be what is available for your audience to choose from. Use the toggles on the right to activate/deactivate songs from the list. <br>
 				<a href="#" onClick="toggleCustom();">Click here</a> to enable/disable custom song requests.</h4>
 				<div class="table-responsive">
-					<table class="table table-condensed table-hover" height="400px">
-						<tbody>
+					<table class="table table-condensed table-hover">
+						<tbody height="400px;">
 							<tr>
 								<th>Artist</th>
 								<th>Title</th>
