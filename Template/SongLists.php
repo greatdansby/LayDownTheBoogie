@@ -40,6 +40,9 @@ if(isset($_POST['pw'])){
 if($loggedin=true){
 	$sql="SELECT ListName, ShowGenre, AvailableList, SongCount, Active FROM SongLists WHERE DJ = '$dj' or DJ = 'LDTB' Order By ListName";
 	$songlists = loadArray(mysqli_query($con, $sql),array('ListName', 'ShowGenre', 'AvailableList', 'SongCount', 'Active'));
+	
+	$sql="SELECT SongTitle, SongArtist, Status, SongID FROM CustomLists WHERE DJ = '$dj' or DJ = 'LDTB' Order By SongArtist, SongTitle";
+	$songlist = loadArray(mysqli_query($con, $sql),array('SongTitle', 'SongArtist', 'Status', 'SongID'));
 }
 
 if ($_FILES[csv][size] > 0) { 
