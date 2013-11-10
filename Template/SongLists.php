@@ -69,7 +69,8 @@ if ($_FILES[csv][size] > 0) {
     // 
 	header('Location: SongLists.php?success=1'); die; 
 }
-if ($_FILES[art][size] > 0) {
+if ($_FILES["art"][size] > 0) {
+	echo "Uploaded file to ../img/" . $dj.".png";
 	move_uploaded_file($_FILES[png][tmp_name], "../img/" . $dj.".png");}
 
 function loadArray($result,$columns){
