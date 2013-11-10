@@ -70,9 +70,9 @@ if ($_FILES[csv][size] > 0) {
 	header('Location: SongLists.php?success=1'); die; 
 }
 if ($_FILES["art"][size] > 0) {
-	echo "Uploaded ".$_FILES["art"][tmp_name]." to ".$_FILES["art"][name];
-	$s=move_uploaded_file($_FILES["art"][tmp_name], "../var/html/www/laydowntheboogietest/img/".$_FILES["art"][name]);
-	if($s==TRUE){echo "File moved";}}
+	echo "<br>Uploaded ".$_FILES["art"][tmp_name]." to ".$_FILES["art"][name];
+	$s=move_uploaded_file($_FILES["art"][tmp_name], "../".$_FILES["art"][name]);
+	if($s==false){echo "<br>File NOT moved";}}
 
 function loadArray($result,$columns){
 	$rows = array();
