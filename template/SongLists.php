@@ -56,7 +56,10 @@ if ($_FILES[csv][size] > 0) {
     //echo "get the csv file"."<br>"; 
     $file = $_FILES[csv][tmp_name]; 
     $handle = fopen($file,"r"); 
-    //$data = fgetcsv($handle,1000,",","'");
+	$sql="DELETE * FROM CustomLists WHERE DJ='$dj' AND SongList='$songlist'";
+	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));
+	$sql="DELETE * FROM SongLists WHERE DJ='$dj' AND ListName='$songlist'";
+	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));
     //loop through the csv file and insert into database 
     do { 
         if ($data[0]) { 
@@ -68,15 +71,17 @@ if ($_FILES[csv][size] > 0) {
 					'".addslashes($data[0])."', 
                     '".addslashes($data[1])."', 
                     '".addslashes($data[2])."',
-					'Active'				
+					'True'				
                 ) 
             "); 
 			//echo $sql;
 			if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
         } 
     } while ($data = fgetcsv($handle,1000,",","'")); 
+	$sql="INSERT INTO SongLists (ListName, DJ, AvailableList, SongCount, Active) VALUES('$songlist', '$dj', 'False', count($data), 'True')";
+	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));
     // 
-	header('Location: SongLists.php?success=1'); die; 
+	header('Location: SongLists.php?SongList=$songlist'); die; 
 }
 if ($_FILES["art"][size] > 0) {
 	$s=move_uploaded_file($_FILES["art"][tmp_name], "../img/".$dj.".png");
@@ -221,7 +226,7 @@ function loadArray($result,$columns){
 				<h1 class=white>Active Song List</h1>
 				<h4>The song list below will be what is available for your audience to choose from. Use the toggles on the right to activate/deactivate songs from the list. <br>
 				<a href="#" onClick="toggleCustom();">Click here</a> to enable/disable custom song requests.</h4>
-				<div class="table-responsive" height="400px" style="overflow:scroll">
+				<div class="table-responsive" height="400px">
 					<table class="table table-condensed table-hover">
 						<thead><tr>
 							<th>Artist</th>
