@@ -41,7 +41,7 @@ if($loggedin=true){
 	$sql="SELECT ListName, ShowGenre, AvailableList, SongCount, Active FROM SongLists WHERE DJ = '$dj' or DJ = 'LDTB' Order By ListName";
 	$songlists = loadArray(mysqli_query($con, $sql),array('ListName', 'ShowGenre', 'AvailableList', 'SongCount', 'Active'));
 }
-
+print_r($_FILES);
 if ($_FILES[csv][size] > 0) { 
 
     //echo "get the csv file"."<br>"; 
