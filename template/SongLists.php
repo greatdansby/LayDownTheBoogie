@@ -222,9 +222,9 @@ function loadArray($result,$columns){
 							for($r=0;$r<count($songlist);$r++){
 							echo "<tr id='Song".$songlist[$r]['SongID']."' onClick='setSongStatus(".$songlist[$r]['SongID'].",this.className)'";
 							if($songlist[$r]['Status']=='True'){
-								echo " class='success'";
+								echo " class='Success'";
 							} else {
-								echo " class='danger'";
+								echo " class='Danger'";
 							}
 							echo "><td>".$songlist[$r]['SongArtist']."</td>";
 							echo "<td>".$songlist[$r]['SongTitle']."</td>";
