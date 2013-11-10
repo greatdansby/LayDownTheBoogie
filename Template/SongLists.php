@@ -160,6 +160,7 @@ function loadArray($result,$columns){
 				}
 				tr:hover {
 					cursor: hand;
+					background-color: #dff0d8;
 				}
 				th, th:hover{
 					background-color: yellow;
