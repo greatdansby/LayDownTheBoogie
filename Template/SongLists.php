@@ -38,10 +38,15 @@ if(isset($_POST['pw'])){
 	}
 }
 if($loggedin=true){
+	if(isset($_GET['SongList'])){
+		$sql="UPDATE SongLists SET Active='False' WHERE DJ = '$dj'";
+		if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
+		$sql="UPDATE SongLists SET Active='True' WHERE DJ = '$dj' AND SongList='".$_GET['SongList']."'";
+		if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 	$sql="SELECT ListName, ShowGenre, AvailableList, SongCount, Active FROM SongLists WHERE DJ = '$dj' or DJ = 'LDTB' Order By ListName";
 	$songlists = loadArray(mysqli_query($con, $sql),array('ListName', 'ShowGenre', 'AvailableList', 'SongCount', 'Active'));
 	
-	$sql="SELECT SongTitle, SongArtist, Status, SongID FROM CustomLists WHERE DJ = '$dj' or DJ = 'LDTB' Order By SongArtist, SongTitle";
+	$sql="SELECT SongTitle, SongArtist, Status, SongID FROM CustomLists inner join SongLists on SongLists.DJ=CustomLists.DJ and ListName=SongList WHERE (CustomLists.DJ = '$dj' or CustomLists.DJ = 'LDTB') and Active='True' Order By SongArtist, SongTitle";
 	$songlist = loadArray(mysqli_query($con, $sql),array('SongTitle', 'SongArtist', 'Status', 'SongID'));
 }
 
