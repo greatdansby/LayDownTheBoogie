@@ -126,10 +126,12 @@ function loadArray($result,$columns){
 							alert(errorThrown.responseText);
 						},
 						success: function(data){
-							if(Status=='True'){
-								$("#Song1").switchClass("Danger","Success");
+							if($(data).hasClass("Danger")){
+								$(data).removeClass("Danger");
+								$(data).addClass("Success");
 							}else{
-								$("#Song1").switchClass("Success","Danger");
+								$(data).removeClass("Success");
+								$(data).addClass("Danger");
 							}
 							}
 						});
