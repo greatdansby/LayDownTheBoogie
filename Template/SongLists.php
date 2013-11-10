@@ -57,9 +57,9 @@ if ($_FILES[csv][size] > 0) {
     $file = $_FILES[csv][tmp_name]; 
     $handle = fopen($file,"r"); 
 	$sql="DELETE * FROM CustomLists WHERE DJ='$dj' AND SongList='$songlist'";
-	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));
+	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 	$sql="DELETE * FROM SongLists WHERE DJ='$dj' AND ListName='$songlist'";
-	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));
+	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
     //loop through the csv file and insert into database 
     do { 
         if ($data[0]) { 
@@ -79,7 +79,7 @@ if ($_FILES[csv][size] > 0) {
         } 
     } while ($data = fgetcsv($handle,1000,",","'")); 
 	$sql="INSERT INTO SongLists (ListName, DJ, AvailableList, SongCount, Active) VALUES('$songlist', '$dj', 'False', count($data), 'True')";
-	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));
+	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
     // 
 	header('Location: SongLists.php?SongList=$songlist'); die; 
 }
@@ -226,14 +226,14 @@ function loadArray($result,$columns){
 				<h1 class=white>Active Song List</h1>
 				<h4>The song list below will be what is available for your audience to choose from. Use the toggles on the right to activate/deactivate songs from the list. <br>
 				<a href="#" onClick="toggleCustom();">Click here</a> to enable/disable custom song requests.</h4>
-				<div class="table-responsive" height="400px">
+				<div class="table-responsive">
 					<table class="table table-condensed table-hover">
 						<thead><tr>
 							<th>Artist</th>
 							<th>Title</th>
 							<th>Visible to Users</th>
 						</tr></thead>
-						<tbody>
+						<tbody  height="400px" overflow="vscroll">
 						<?php 
 							for($r=0;$r<count($songlist);$r++){
 							echo "<tr id='Song".$songlist[$r]['SongID']."' onClick='setSongStatus(".$songlist[$r]['SongID'].",this.className)'";
