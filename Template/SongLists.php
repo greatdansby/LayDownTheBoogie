@@ -125,7 +125,7 @@ function loadArray($result,$columns){
 						error: function(errorThrown,textStatus){
 							alert(errorThrown.responseText);
 						},
-						success: function(){
+						success: function(data){
 							if(Status=='True'){
 								$(data).switchClass("Danger","Success");
 							}else{
