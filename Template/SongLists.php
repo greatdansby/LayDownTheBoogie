@@ -215,7 +215,7 @@ function loadArray($result,$columns){
 				<h4>Use the format below to put your custom song list into a CSV file, and then upload it.</h4><br>
 				<a href="../SampleList.csv">SampleList.CSV</a>
 				<form action="SongLists.php" method="post" enctype="multipart/form-data" name="form1" id="form1"> 
-					Name of song list: <input id=songlist name=songlist type=text >
+					Name of song list: <input id="songlist" name="songlist" type=text >
 					<input type="file" id="csv" name="csv"> 
 					<input type="submit" name="Submit" value="Upload"> 
 				</form>
