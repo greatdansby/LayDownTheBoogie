@@ -218,7 +218,7 @@ function loadArray($result,$columns){
 						<tbody>
 						<?php 
 							for($r=0;$r<count($songlist);$r++){
-							echo "<tr id='Song".$songlist[$r]['SongID']."' onClick=setActive('".$songlist[$r]['SongID']."')'";
+							echo "<tr id='Song".$songlist[$r]['SongID']."' onClick=setSongStatus('".$songlist[$r]['SongID']."',this.className)'";
 							if($songlist[$r]['Status']=='True'){
 								echo " class='success'";
 							} else {
