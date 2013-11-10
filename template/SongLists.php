@@ -41,7 +41,7 @@ if($loggedin=true){
 	if(isset($_GET['SongList'])){
 		$sql="UPDATE SongLists SET Active='False' WHERE DJ = '$dj'";
 		if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
-		$sql="UPDATE SongLists SET Active='True' WHERE DJ = '$dj' AND SongList='".$_GET['SongList']."'";
+		$sql="UPDATE SongLists SET Active='True' WHERE DJ = '$dj' AND ListName='".$_GET['SongList']."'";
 		if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 	}
 	$sql="SELECT ListName, ShowGenre, AvailableList, SongCount, Active FROM SongLists WHERE DJ = '$dj' or DJ = 'LDTB' Order By ListName";
