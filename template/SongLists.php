@@ -58,7 +58,7 @@ if ($_FILES[csv][size] > 0) {
     $handle = fopen($file,"r"); 
 	$sql="DELETE * FROM CustomLists WHERE DJ='".$dj."' AND SongList='".$listname."'";
 	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
-	$sql="DELETE * FROM SongLists WHERE DJ='".$dj."' AND ListName='".$listname".'";
+	$sql="DELETE * FROM SongLists WHERE DJ='".$dj."' AND ListName='".$listname."'";
 	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
     //loop through the csv file and insert into database 
     do { 
