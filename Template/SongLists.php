@@ -78,7 +78,7 @@ if ($_FILES[csv][size] > 0) {
 			if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
         } 
     } while ($data = fgetcsv($handle,1000,",","'")); 
-	$sql="INSERT INTO SongLists (ListName, DJ, AvailableList, SongCount, Active) VALUES('".$songlist."', '."$dj."', 'False', ".count($data).", 'True')";
+	$sql="INSERT INTO SongLists (ListName, DJ, AvailableList, SongCount, Active) VALUES('".$songlist."', '".$dj."', 'False', ".count($data).", 'True')";
 	if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
     // 
 	header('Location: SongLists.php?SongList='.$songlist); die; 
