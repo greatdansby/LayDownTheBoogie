@@ -143,6 +143,9 @@ function loadArray($result,$columns){
 							}
 						});
 				}
+				function setActive(SongList){
+					window.location="SongList.php?SongList="+SongList;
+				}
 			</script>
 	</head>
 	<body>
