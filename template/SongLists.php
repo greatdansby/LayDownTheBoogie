@@ -126,12 +126,12 @@ function loadArray($result,$columns){
 	<body>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="navbar-header">
-		<a class="navbar-brand" href="#">DJ Dashboard</a>
+		<a class="navbar-brand" href="#">DJ Dashboard
 		<?php if($loggedin){
-		echo '<div class="nav navbar-nav">'.$dj.'</div>';
+		echo ': '.$dj.'</a>';
 		} else {
 		echo '
-		<form class="navbar-form navbar-left" role="search" method=post action=SongLists.php id="frm1">
+		</a><form class="navbar-form navbar-left" role="search" method=post action=SongLists.php id="frm1">
 			<div class="form-group">
 				<input type="password" name="pw" class="form-control" placeholder="Password">
 			</div>
