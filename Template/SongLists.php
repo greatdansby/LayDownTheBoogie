@@ -112,22 +112,27 @@ function loadArray($result,$columns){
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
 			<script src="../js/gatracking.js"></script>
 			<script type="text/javascript">
-				function setStatus(Title, Artist,Status){
+				function setSongStatus(SongID, Status){
 					$.ajax({
-						url: 'update.php',
+						url: 'songupdate.php',
 						type: "POST",
 						data: {
 						'DJ' : '<?echo $dj;?>',
-						'Title' : Title,
-						'Artist' : Artist,
+						'SongID' : SongID,
 						'Status': Status},
 						cache: false,
 						dataType: 'html',
 						error: function(errorThrown,textStatus){
-					alert(errorThrown.responseText);
-					},
-				success: function(){document.getElementById("frm1").submit()}
-				});
+							alert(errorThrown.responseText);
+						},
+						success: function(){
+							if(Status=='True'){
+								$(data).switchClass("Danger","Success");
+							}else{
+								$(data).switchClass("Success","Danger");
+							}
+							}
+						});
 				}
 			</script>
 	</head>
@@ -181,8 +186,8 @@ function loadArray($result,$columns){
 							if($songlists[$r]['Active']='True'){
 								echo " class='success'";}
 							echo "><td>".$songlists[$r]['ListName']."</td>";
-							echo "><td>".$songlists[$r]['SongCount']."</td>";
-							echo "><td>".$songlists[$r]['Active']."</td></tr>";}?>
+							echo "<td>".$songlists[$r]['SongCount']."</td>";
+							echo "<td>".$songlists[$r]['Active']."</td></tr>";}?>
 						</tbody>
 					</table>
 				</div>
@@ -213,15 +218,15 @@ function loadArray($result,$columns){
 						<tbody>
 						<?php 
 							for($r=0;$r<count($songlist);$r++){
-							echo "<tr id='Song".$songlist[$r]['SongID']."' onClick=setActive('".$songlist[$r]['SongID']."')'>";
-							if($songlist[$r]['Status']='True'){
+							echo "<tr id='Song".$songlist[$r]['SongID']."' onClick=setActive('".$songlist[$r]['SongID']."')'";
+							if($songlist[$r]['Status']=='True'){
 								echo " class='success'";
 							} else {
 								echo " class='danger'";
 							}
 							echo "><td>".$songlist[$r]['SongArtist']."</td>";
-							echo "><td>".$songlist[$r]['SongTitle']."</td>";
-							echo "><td>".$songlist[$r]['Status']."</td></tr>";}?>
+							echo "<td>".$songlist[$r]['SongTitle']."</td>";
+							echo "<td>".$songlist[$r]['Status']."</td></tr>";}?>
 						</tbody>
 					</table>
 				</div>
