@@ -70,10 +70,13 @@ if ($_FILES[csv][size] > 0) {
 	header('Location: SongLists.php?success=1'); die; 
 }
 if ($_FILES["art"][size] > 0) {
-	echo "<br>Uploaded ".$_FILES["art"][tmp_name]." to ".$_FILES["art"][name];
-	echo "<br>".$_FILES["art"][error];
-	$s=move_uploaded_file($_FILES["art"][tmp_name], "../img/".$_FILES["art"][name]);
-	if($s==false){echo "<br>File NOT moved";}}
+	$s=move_uploaded_file($_FILES["art"][tmp_name], "../img/".$dj.".png");
+	if($s==false){
+		echo "<div class='alert alert-block alert-info fade in'>
+			<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+			<h4>File Upload Failed</h4>
+			<p>Please make sure your file type is .PNG. E-mail info@LayDownTheBoogie.com if you continue to have issues.</p>
+		  </div>";}}
 
 function loadArray($result,$columns){
 	$rows = array();
