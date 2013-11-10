@@ -153,6 +153,16 @@ function loadArray($result,$columns){
 					window.location="SongLists.php?SongList="+SongList;
 				}
 			</script>
+			<style>
+				tbody {
+					display: block;
+					height: 100%;
+					overflow: auto;
+				}
+				tr:hover {
+					cursor: hand;
+				}
+			</style>
 	</head>
 	<body>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
