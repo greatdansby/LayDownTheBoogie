@@ -17,5 +17,5 @@ $sql="UPDATE CustomLists SET Status='$Status' WHERE SongID='$SongID'";
 if(!mysqli_query($con,$sql)){
 	printf("Error: %s\n", mysqli_error($con));
 }else{
-echo "#".SongID;}
+echo "#Song".SongID;}
 ?>
