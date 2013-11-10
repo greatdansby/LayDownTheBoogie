@@ -195,7 +195,7 @@ function loadArray($result,$columns){
 						<tbody>
 						<?php 
 							for($r=0;$r<count($songlists);$r++){
-							echo "<tr onClick=setActive('".$songlists[$r]['ListName']."')'";
+							echo "<tr onClick=setActive('".$songlists[$r]['ListName']."')";
 							if($songlists[$r]['Active']='True'){
 								echo " class='success'";}
 							echo "><td>".$songlists[$r]['ListName']."</td>";
