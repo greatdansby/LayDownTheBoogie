@@ -71,7 +71,7 @@ if ($_FILES[csv][size] > 0) {
 }
 if ($_FILES["art"][size] > 0) {
 	echo "Uploaded ".$_FILES["art"][tmp_name]." to ".$_FILES["art"][name];
-	move_uploaded_file($_FILES["art"][tmp_name], $_FILES["art"][name]);}
+	echo move_uploaded_file($_FILES["art"][tmp_name], $_FILES["art"][name]);}
 
 function loadArray($result,$columns){
 	$rows = array();
