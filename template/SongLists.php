@@ -127,9 +127,9 @@ function loadArray($result,$columns){
 						},
 						success: function(data){
 							if(Status=='True'){
-								$(data).switchClass("Danger","Success");
+								$("#Song1").switchClass("Danger","Success");
 							}else{
-								$(data).switchClass("Success","Danger");
+								$("#Song1").switchClass("Success","Danger");
 							}
 							}
 						});
