@@ -213,15 +213,15 @@ function loadArray($result,$columns){
 						<tbody>
 						<?php 
 							for($r=0;$r<count($songlist);$r++){
-							echo "<tr onClick=setActive('".$songlist[$r]['SongID']."')'";
-							if($songlists[$r]['Status']='True'){
+							echo "<tr id='Song".$songlist[$r]['SongID']."' onClick=setActive('".$songlist[$r]['SongID']."')'>";
+							if($songlist[$r]['Status']='True'){
 								echo " class='success'";
 							} else {
 								echo " class='danger'";
 							}
-							echo "><td>".$songlists[$r]['SongArtist']."</td>";
-							echo "><td>".$songlists[$r]['SongTitle']."</td>";
-							echo "><td>".$songlists[$r]['Status']."</td></tr>";}?>
+							echo "><td>".$songlist[$r]['SongArtist']."</td>";
+							echo "><td>".$songlist[$r]['SongTitle']."</td>";
+							echo "><td>".$songlist[$r]['Status']."</td></tr>";}?>
 						</tbody>
 					</table>
 				</div>
