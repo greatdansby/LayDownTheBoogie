@@ -59,7 +59,7 @@
 			</div>        
 		</div>	  
     </div>
-    <div class="container" style="margin-top:10px;">
+    <div class="container" style="margin-top:70px;">
 		<a id="signup" style="margin-top:30px;"></a>
 		<hr class="featurette-divider">
 		<div class="row">
