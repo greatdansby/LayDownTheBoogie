@@ -9,28 +9,39 @@ $contact = $_GET["Contact"];
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 if(isset($_POST['pw'])){
-$pw = $_POST['pw'];
-$sql = "SELECT DJ, PW FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
-$result = mysqli_query($con,$sql);
-if(mysqli_num_rows($result)==1){
+	$pw = $_POST['pw'];
+	$sql = "SELECT DJ FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
+	$result = mysqli_query($con,$sql);
+	if(mysqli_num_rows($result)==1){
+		$loggedin=true;
+		$sql = "UPDATE DJs SET LastIP = '".$_SERVER['REMOTE_ADDR']."' WHERE DJ='$dj'";
+		if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
+	} else {
+		echo "<div class='alert alert-block alert-danger fade in'>
+			<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>X</button>
+			<h4>Password incorrect</h4>
+			<p>Please check your password and try again.</p>
+		  </div>";}
+}else {
+	$sql = "SELECT DJ FROM DJs WHERE DJ='$dj' AND LastIP='".$_SERVER['REMOTE_ADDR']."'";
+	$result = mysqli_query($con,$sql);
+	if(mysqli_num_rows($result)==1){
+		$loggedin=true;
+	}else{
+		echo "<div class='alert alert-block alert-info fade in'>
+			<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>X</button>
+			<h4>Please enter your password above</h4>
+			<p>E-mail info@LayDownTheBoogie.com if you have any issues or need to reset your password.</p>
+		  </div>";
+	}
+}
+if($loggedin=true){
 
 $sql="SELECT Title, Artist, COUNT(ID) as RequestCount FROM Requests WHERE DJ = '$dj' AND Status='Active' Group By Title, Artist Order By RequestCount Desc";
 $songs = loadArray(mysqli_query($con, $sql),array('Artist','Title','RequestCount'));
 $sql="SELECT Title, Artist, Notes, Username FROM Requests WHERE DJ = '$dj' AND Status='Active'";
 $notes = loadArray(mysqli_query($con, $sql),array('Artist','Title','Notes','Username'));
-} else {
-echo "<div class='alert alert-block alert-danger fade in'>
-        <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-        <h4>Password incorrect</h4>
-        <p>Please check your password and try again.</p>
-      </div>";}
-}else {
-echo "<div class='alert alert-block alert-info fade in'>
-        <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-        <h4>Please enter your password above</h4>
-        <p>E-mail info@LayDownTheBoogie.com if you have any issues or need to reset your password.</p>
-      </div>";
-}
+} 
 
 
 function loadArray($result,$columns){
@@ -97,7 +108,7 @@ function loadArray($result,$columns){
 				<div class="form-group">
 					<input type="password" name="pw" class="form-control" placeholder="Password" value='<?echo $pw;?>'>
 				</div>
-				<button type="submit" class="btn btn-default" name="login" id="login">Login</button>
+				<button type="submit" class="btn btn-primary" name="login" id="login">Login</button>
 			</form>
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Requested Songs</a></li>
