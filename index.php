@@ -14,22 +14,6 @@
 			<link rel="icon" href="favicon.ico" type="image/x-icon"> 
 			<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
 			<style>
-				.nav-style {
-					background-color: #fafafa;
-					margin-top: 10px;
-					-webkit-box-shadow: 2px 10px rgba(244,0,218,.25);  
-					-moz-box-shadow: 0 2px 10px rgba(244,0,218,.25);  
-					box-shadow: 0 2px 10px rgba(244,0,218,.25);
-					background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ddd), to(#bbb)); 
-					background-image: -webkit-linear-gradient(top, #ddd, #bbb);  
-					background-image: -o-linear-gradient(top, #ddd, #bbb);  
-					background-image: linear-gradient(to bottom, #ddd, #bbb);
-					-webkit-border-radius: 25px;  
-					-moz-border-radius: 25px;  
-					border-radius: 25px;  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ddd', endColorstr='#bbb', GradientType=0);  
-					-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);  
-					-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-				}
 				.splash {
 					background-image: url("./img/splash.png");
 					background-repeat: no-repeat;
@@ -76,7 +60,7 @@
 		</div>	  
     </div>
     <div class="container" style="margin-top:10px;">
-		<a id="signup" style="margin-top:25px;"></a>
+		<a id="signup" style="margin-top:30px;"></a>
 		<hr class="featurette-divider">
 		<div class="row">
 			<div class="col-xs-12 col-md-3">

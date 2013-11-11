@@ -7,9 +7,24 @@ background-color:#eee;}
 	margin-top:5px;
 	margin-bottom:5px;}
 .featurette-divider {
-	margin: 50px 0; /* Space out the Bootstrap <hr> more */}
+	margin: 40px 0; /* Space out the Bootstrap <hr> more */}
 .white{
 	color:#FFFFFF;}
 .blue{
 	color:rgb(0,4,223);}
-	
+.nav-style {
+	background-color: #fafafa;
+	margin-top: 10px;
+	-webkit-box-shadow: 2px 10px rgba(244,0,218,.25);  
+	-moz-box-shadow: 0 2px 10px rgba(244,0,218,.25);  
+	box-shadow: 0 2px 10px rgba(244,0,218,.25);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ddd), to(#bbb)); 
+	background-image: -webkit-linear-gradient(top, #ddd, #bbb);  
+	background-image: -o-linear-gradient(top, #ddd, #bbb);  
+	background-image: linear-gradient(to bottom, #ddd, #bbb);
+	-webkit-border-radius: 25px;  
+	-moz-border-radius: 25px;  
+	border-radius: 25px;  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ddd', endColorstr='#bbb', GradientType=0);  
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);  
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}

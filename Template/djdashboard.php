@@ -89,21 +89,23 @@ function loadArray($result,$columns){
 			</script>
 	</head>
 	<body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	  <div class="navbar-header">
-		<a class="navbar-brand" href="#">DJ Dashboard</a>
-		<form class="navbar-form navbar-left" role="search" method=post action=DJDashboard.php id="frm1">
-			<div class="form-group">
-				<input type="password" name="pw" class="form-control" placeholder="Password" value='<?echo $pw;?>'>
-			</div>
-			<button type="submit" class="btn btn-default" name="login" id="login">Login</button>
-		</form>
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Requested Songs</a></li>
-			<li><a href="SongLists.php">Song Lists & Settings</a></li>
-		</ul>
-	  </div>
-	</nav>
+	<div class="navbar navbar-fixed-top">
+      <div class="container nav-style">
+		  <div class="navbar-header">
+			<a class="navbar-brand" href="#">DJ Dashboard</a>
+			<form class="navbar-form navbar-left" role="search" method=post action=DJDashboard.php id="frm1">
+				<div class="form-group">
+					<input type="password" name="pw" class="form-control" placeholder="Password" value='<?echo $pw;?>'>
+				</div>
+				<button type="submit" class="btn btn-default" name="login" id="login">Login</button>
+			</form>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Requested Songs</a></li>
+				<li><a href="SongLists.php">Song Lists & Settings</a></li>
+			</ul>
+		  </div>
+		</div>
+	</div>
     <div class="container" style="margin-top:40px;" data-toggle="collapse">
 		<div class="page-header">
 			<h1>Requested Songs <small>Sorted by number of requests</small></h1>
