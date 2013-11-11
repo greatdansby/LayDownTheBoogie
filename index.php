@@ -76,7 +76,7 @@
 		</div>	  
     </div>
     <div class="container" style="margin-top:10px;">
-		<a id="signup"></a>
+		<a id="signup" style="margin-top:25px;"></a>
 		<hr class="featurette-divider">
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
