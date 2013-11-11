@@ -114,7 +114,7 @@ function loadArray($result,$columns){
 				</div>
 				<button type="submit" class="btn btn-primary" name="login" id="login">Login</button>
 			</form>';
-			?>
+			}?>
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Requested Songs</a></li>
 				<li><a href="SongLists.php">Song Lists & Settings</a></li>
