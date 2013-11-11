@@ -33,6 +33,7 @@
 				.splash {
 					background-image: url("./img/splash.png");
 				}
+			</style>
 	<body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container nav-style">
@@ -65,7 +66,7 @@
       </div>
     </div>
 	<div class="jumbotron">
-      <div class="container">
+      <div class="container splash">
         <img src="img/logo.png" class="img-responsive" alt="Responsive logo">
         <p>Lay Down the Boogie is a way for DJs to allow guests to request songs using their smartphone. As a DJ, you can manage your request queue, capture guest information and advertise your business in a new way.</p>
       </div>
