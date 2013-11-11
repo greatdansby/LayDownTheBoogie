@@ -103,13 +103,18 @@ function loadArray($result,$columns){
 	<div class="navbar navbar-fixed-top">
       <div class="container nav-style">
 		  <div class="navbar-header">
-			<a class="navbar-brand" href="#">DJ Dashboard</a>
+			<a class="navbar-brand" href="#">DJ Dashboard
+			<?php if($loggedin){
+			echo ': '.$dj.'</a>';
+			} else {
+			echo '</a>
 			<form class="navbar-form navbar-left" role="search" method=post action=DJDashboard.php id="frm1">
 				<div class="form-group">
 					<input type="password" name="pw" class="form-control" placeholder="Password" value='<?echo $pw;?>'>
 				</div>
 				<button type="submit" class="btn btn-primary" name="login" id="login">Login</button>
-			</form>
+			</form>';
+			?>
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Requested Songs</a></li>
 				<li><a href="SongLists.php">Song Lists & Settings</a></li>
