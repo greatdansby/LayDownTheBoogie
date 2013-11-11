@@ -195,7 +195,7 @@ function loadArray($result,$columns){
         <h4>Your file has been uploaded successfully.</h4></div>"; } //generic success notice ?> 
 		<div class="col-xs-12 col-md-6">
 			<div class="col-xs-12 col-md-12">
-				<h1 class=white>Upload Custom Artwork</h1>
+				<h1 class=blue>Upload Custom Artwork</h1>
 				<h4>Image will be displayed at laydowntheboogie.com/<?php echo $dj;?> and will be scaled to fit the screen. The following formats are supported: PNG</h4>
 				<img class="img-responsive" src="../img/<? echo $dj.".png";?>">
 				<form action="SongLists.php" method="post" enctype="multipart/form-data" name="artwork" id="artwork">  
@@ -204,7 +204,7 @@ function loadArray($result,$columns){
 				</form>
 			</div>
 			<div class="col-xs-12 col-md-12">
-				<h1 class=white>Song Lists</h1>
+				<h1 class=blue>Song Lists</h1>
 				<div class="table-responsive">
 					<table class="table table-condensed table-hover" width="100%">
 						<tbody><tr>
@@ -225,7 +225,7 @@ function loadArray($result,$columns){
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-12">
-				<h1 class=white>Upload a Custom Song List</h1>
+				<h1 class=blue>Upload a Custom Song List</h1>
 				<h4>Use the format below to put your custom song list into a CSV file, and then upload it.</h4><br>
 				<a href="../SampleList.csv">SampleList.CSV</a>
 				<form action="SongLists.php" method="post" enctype="multipart/form-data" name="form1" id="form1"> 
@@ -237,7 +237,7 @@ function loadArray($result,$columns){
 		</div>
 		<div class="col-xs-12 col-md-6">
 			<div class="col-xs-12 col-md-12">
-				<h1 class=white>Active Song List</h1>
+				<h1 class=blue>Active Song List</h1>
 				<h4>The song list below will be what is available for your audience to choose from. Use the toggles on the right to activate/deactivate songs from the list. <br>
 				<a href="#" onClick="toggleCustom();">Click here</a> to enable/disable custom song requests.</h4>
 				<div class="table-responsive">
