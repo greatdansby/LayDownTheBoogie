@@ -204,7 +204,7 @@ function loadArray($result,$columns){
 			<div class="col-xs-12 col-md-12">
 				<h1 class=white>Song Lists</h1>
 				<div class="table-responsive">
-					<table class="table table-condensed table-hover">
+					<table class="table table-condensed table-hover" width="100%">
 						<tbody><tr>
 							<th>List Name</th>
 							<th>Song Count</th>

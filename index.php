@@ -13,10 +13,29 @@
 			<script src="js/gatracking.js"></script>
 			<link rel="icon" href="favicon.ico" type="image/x-icon"> 
 			<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
-	</head>
+			<style>
+				.nav-style {
+					background-color: #fafafa;
+					margin-top: 10px;
+					-webkit-box-shadow: 2px 10px rgba(244,0,218,.25);  
+					-moz-box-shadow: 0 2px 10px rgba(244,0,218,.25);  
+					box-shadow: 0 2px 10px rgba(244,0,218,.25);
+					background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ddd), to(#bbb)); 
+					background-image: -webkit-linear-gradient(top, #ddd, #bbb);  
+					background-image: -o-linear-gradient(top, #ddd, #bbb);  
+					background-image: linear-gradient(to bottom, #ddd, #bbb);
+					-webkit-border-radius: 25px;  
+					-moz-border-radius: 25px;  
+					border-radius: 25px;  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ddd', endColorstr='#bbb', GradientType=0);  
+					-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);  
+					-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+				}
+				.splash {
+					background-image: url("./img/splash.png");
+				}
 	<body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+      <div class="container nav-style">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
@@ -65,11 +84,11 @@
 				<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg btn-margin btn-block">Give Feedback</a>
 			</div>
 			<div class="col-xs-12 col-md-5">
-				<h1 class=white>Sign Up for the Beta Test</h1>
+				<h1 class=blue>Sign Up for the Beta Test</h1>
 				<h4>Create a free account today during our beta phase using the form on the left</h4>
 			</div>
 			<div class="col-xs-12 col-md-4">
-				<h1 class=white>Take it for a Test Drive</h1>
+				<h1 class=blue>Take it for a Test Drive</h1>
 				<h4>Scan the QR code to see the live app on your phone. Or <a href="template/DJDashboard.php">click here</a> to see the DJ Dashboard (password is TESTDRIVE).</h4>
 				<a href="http://laydowntheboogie.com/template" class=thumbnail><img data-src="holder.js/171x180" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://laydowntheboogie.com/template" alt="..."></a>
 			</div>
@@ -79,7 +98,7 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-9">
 				
-				<h1 class=white>No App to Download</h1>
+				<h1 class=blue>No App to Download</h1>
 				<h4>Lay Down the Boogie is entirely web-based using responsive HTML5. This means it'll adapt to any smartphone, providing a great user experience.</h4>
 			</div>
 			<div class="col-xs-12 col-md-3">
@@ -93,7 +112,7 @@
 				<img src="img/demo_songs.png" alt="...">
 			</div>
 			<div class="col-xs-12 col-md-9">				
-				<h1 class=white>Custom Song Lists</h1>
+				<h1 class=blue>Custom Song Lists</h1>
 				<h4>Upload a custom list of songs for party-goers to choose from, or use one of our standard lists. Ensure that everyone can find the song that they're looking for.</h4>
 			</div>
 		</div>
@@ -101,7 +120,7 @@
 		<hr class="featurette-divider">
 		<div class="row">
 			<div class="col-xs-12 col-md-9">				
-				<h1 class=white>Custom Branding</h1>
+				<h1 class=blue>Custom Branding</h1>
 				<h4>Unique URL to advertise. Custom images for the event, or even a link to your personal website.</h4>
 			</div>
 			<div class="col-xs-12 col-md-3">
@@ -115,7 +134,7 @@
 				<img src="img/features.png" alt="...">
 			</div>
 			<div class="col-xs-12 col-md-9">				
-				<h1 class=white>New Features</h1>
+				<h1 class=blue>New Features</h1>
 				<h4>We're constantly innovating to come up with new ways to improve your customer's experience. Let's us know what we can do to support your business.</h4>
 			</div>
 		</div>
