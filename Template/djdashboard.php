@@ -110,11 +110,12 @@ function loadArray($result,$columns){
 			echo '</a>
 			<form class="navbar-form navbar-left" role="search" method=post action=DJDashboard.php id="frm1">
 				<div class="form-group">
-					<input type="password" name="pw" class="form-control" placeholder="Password" value='<?echo $pw;?>'>
+					<input type="password" name="pw" class="form-control" placeholder="Password" value='.$pw.'>
 				</div>
 				<button type="submit" class="btn btn-primary" name="login" id="login">Login</button>
 			</form>';
-			}?>
+			}
+			?>
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Requested Songs</a></li>
 				<li><a href="SongLists.php">Song Lists & Settings</a></li>
