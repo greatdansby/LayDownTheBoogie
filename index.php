@@ -33,6 +33,7 @@
 				.splash {
 					background-image: url("./img/splash.png");
 					background-repeat: no-repeat;
+					margin-top: 30px;
 				}
 			</style>
 	<body>
@@ -66,12 +67,11 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-	<hr class="featurette-divider">
     <div class="container">
 		<div class="row splash">
 			<div class="col-xs-5 col-md-5">
 				<img src="img/logo.png" class="img-responsive" alt="Responsive logo">
-				<h3>Lay Down the Boogie is a way for DJs to allow guests to request songs using their smartphone. As a DJ, you can manage your request queue, capture guest information and advertise your business in a new way.</h3>
+				<h3>A song request system allowing guests to request songs using their smartphone. As a DJ, you can manage your request queue, capture guest information and advertise your business.</h3>
 			</div>        
 		</div>	  
     </div>
