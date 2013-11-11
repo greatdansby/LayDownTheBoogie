@@ -59,8 +59,8 @@
 			</div>        
 		</div>	  
     </div>
-    <div class="container" style="margin-top:70px;">
-		<a id="signup" style="margin-top:30px;"></a>
+    <div class="container">
+		<a id="signup"></a>
 		<hr class="featurette-divider">
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
