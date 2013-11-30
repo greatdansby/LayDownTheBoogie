@@ -19,12 +19,12 @@ background-color:#ddd;}
 	-moz-box-shadow: 0 2px 10px rgba(244,0,218,.25);  
 	box-shadow: 0 2px 10px rgba(244,0,218,.25);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ddd), to(#bbb)); 
-	background-image: -webkit-linear-gradient(top, #ddd, #bbb);  
-	background-image: -o-linear-gradient(top, #ddd, #bbb);  
-	background-image: linear-gradient(to bottom, #ddd, #bbb);
+	background-image: -webkit-linear-gradient(top, #ccc, #aaa);  
+	background-image: -o-linear-gradient(top, #ccc, #aaa);  
+	background-image: linear-gradient(to bottom, #ccc, #aaa);
 	-webkit-border-radius: 25px;  
 	-moz-border-radius: 25px;  
-	border-radius: 25px;  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ddd', endColorstr='#bbb', GradientType=0);  
+	border-radius: 25px;  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc', endColorstr='#aaa', GradientType=0);  
 	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);  
 	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
 }
