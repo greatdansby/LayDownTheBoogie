@@ -32,6 +32,7 @@ if(isset($_POST['pw'])){
 	if(mysqli_num_rows($result)==1){
 		$loggedin=true;
 		$r = mysqli_fetch_assoc($result);
+		print_r($r);
 		$customreq = $r[0]["CustomRequest"];
 	}else{
 		echo "<div class='alert alert-block alert-info fade in'>
