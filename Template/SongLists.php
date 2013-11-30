@@ -12,10 +12,11 @@ $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 $listname = $_POST['listname'];
 if(isset($_POST['pw'])){
 	$pw = $_POST['pw'];
-	$sql = "SELECT DJ FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
+	$sql = "SELECT DJ, CustomRequest FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
 	$result = mysqli_query($con,$sql);
 	if(mysqli_num_rows($result)==1){
 		$loggedin=true;
+		$customreq = $result[0]["CustomRequest"];
 		$sql = "UPDATE DJs SET LastIP = '".$_SERVER['REMOTE_ADDR']."' WHERE DJ='$dj'";
 		if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 	} else {
@@ -25,10 +26,11 @@ if(isset($_POST['pw'])){
 			<p>Please check your password and try again.</p>
 		  </div>";}
 }else {
-	$sql = "SELECT DJ FROM DJs WHERE DJ='$dj' AND LastIP='".$_SERVER['REMOTE_ADDR']."'";
+	$sql = "SELECT DJ, CustomRequest FROM DJs WHERE DJ='$dj' AND LastIP='".$_SERVER['REMOTE_ADDR']."'";
 	$result = mysqli_query($con,$sql);
 	if(mysqli_num_rows($result)==1){
 		$loggedin=true;
+		$customreq = $result[0]["CustomRequest"];
 	}else{
 		echo "<div class='alert alert-block alert-info fade in'>
 			<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
@@ -163,7 +165,8 @@ function loadArray($result,$columns){
 					background-color: #dff0d8;
 				}
 				th, th:hover{
-					background-color: yellow;
+					cursor: pointer;
+					background-color: rgb(0,4,223);
 				}
 			</style>
 	</head>
@@ -238,8 +241,8 @@ function loadArray($result,$columns){
 		<div class="col-xs-12 col-md-6">
 			<div class="col-xs-12 col-md-12">
 				<h1 class=blue>Active Song List</h1>
-				<h4>The song list below will be what is available for your audience to choose from. Use the toggles on the right to activate/deactivate songs from the list. <br>
-				<a href="#" onClick="toggleCustom();">Click here</a> to enable/disable custom song requests.</h4>
+				<h4>The song list below will be what is available for your audience to choose from. Click the row to activate/deactivate songs from the list. <br><br>
+				<a href="#" onClick="toggleCustom();">Click here</a> to <?php if($customreq="no") {echo "enable";}else{echo "disable";}?> custom song requests.</h4>
 				<div class="table-responsive">
 					<table class="table table-condensed table-hover">
 						<tbody height="400px;">
