@@ -4,7 +4,6 @@ $username = $_GET["Username"];
 $contact = $_GET["Contact"];
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
-echo $username;
 ?>
 <html>
 	<head>
