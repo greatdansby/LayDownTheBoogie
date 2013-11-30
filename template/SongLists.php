@@ -164,10 +164,9 @@ function loadArray($result,$columns){
 				}
 				tr:hover {
 					cursor: hand;
-					background-color: #dff0d8;
+					background-color: #ddd;
 				}
-				th, th:hover{
-					cursor: pointer;
+				th{
 					background-color: #aaa;
 				}
 			</style>
@@ -211,16 +210,12 @@ function loadArray($result,$columns){
 			<div class="col-xs-12 col-md-12">
 				<h1 class=blue>Song Lists</h1>
 				<div class="table-responsive">
-					<table class="table table-condensed table-hover" width="100%">
+					<table class="table table-condensed" width="100%">
 						<tbody><tr>
 							<th>List Name</th>
 							<th>Song Count</th>
 							<th>Active</th>
 						</tr>
-						</tbody>
-					</table>
-					<table class="table table-condensed" width="100%">
-						<tbody>
 						<?php 
 							for($r=0;$r<count($songlists);$r++){
 							echo "<tr onClick=setActive('".$songlists[$r]['ListName']."')";
@@ -251,16 +246,12 @@ function loadArray($result,$columns){
 				<a href="#" onClick="toggleCustom();">Click here</a> to <?php if($customreq=="no") {echo "enable";}else{echo "disable";}?> custom song requests.</h4>
 				<div class="table-responsive">
 					<table class="table table-condensed">
-						<tbody>
+						<tbody height="400px;">
 							<tr>
 								<th>Artist</th>
 								<th>Title</th>
 								<th>Visible</th>
-							</tr>
-						</tbody>
-					</table>
-					<table class="table table-condensed table-hover">
-						<tbody height="400px;">
+							</tr>						
 						<?php 
 							for($r=0;$r<count($songlist);$r++){
 							echo "<tr id='Song".$songlist[$r]['SongID']."' onClick='setSongStatus(".$songlist[$r]['SongID'].",this.className)'";
