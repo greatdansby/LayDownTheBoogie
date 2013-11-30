@@ -153,6 +153,22 @@ function loadArray($result,$columns){
 							}
 						});
 				}
+				function toggleCustom(){
+					$.ajax({
+						url: 'customrequest.php',
+						type: "POST",
+						data: {
+						'DJ' : '<?echo $dj;?>',
+						'CustomReq' : $("#custom").html()},
+						cache: false,
+						dataType: 'html',
+						error: function(errorThrown,textStatus){
+							alert(errorThrown.responseText);
+						},
+						success: function(data){
+							$("#custom").html(data);}
+						});
+				}
 				function setActive(SongList){
 					window.location="SongLists.php?SongList="+SongList;
 				}
