@@ -12,7 +12,7 @@ $Status="no";
 }else{
 $Status="yes";}
 
-$sql="UPDATE DJs SET CustomRequests='$Status' WHERE DJ='$DJ'";
+$sql="UPDATE DJs SET CustomRequest='$Status' WHERE DJ='$DJ'";
 if(!mysqli_query($con,$sql)){
 	printf("Error: %s\n", mysqli_error($con));
 }else{
