@@ -13,7 +13,7 @@ if (!$con)
 $sql = "SELECT DJ, CustomRequest FROM DJs WHERE DJ='$dj'";
 $result = mysqli_query($con,$sql);
 $r = mysqli_fetch_assoc($result);
-$customreq = $r[0]["CustomRequest"];
+$customreq = $r["CustomRequest"];
 ?>
 <html>
 	<head>
