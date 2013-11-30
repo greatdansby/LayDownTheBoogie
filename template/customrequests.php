@@ -19,5 +19,5 @@ if(!mysqli_query($con,$sql)){
 if($CustomReq=="disable"){
 	echo "enable";
 }else{
-	echo "disable";}
+	echo "disable";}}
 ?>
