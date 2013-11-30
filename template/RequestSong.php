@@ -26,9 +26,11 @@ $customreq = $r["CustomRequest"];
 			<script src="../bootstrap/js/bootstrap.min.js"></script>
 			<script src="../js/gatracking.js"></script>
 			<script type="text/javascript">
-				if(<?php echo "'".$customreq."'";?>=="no"){
-				$(".input-group").toggleClass("input-group");
-				$(".btn-default").addClass("hidden");}
+				$(function(){
+					if(<?php echo "'".$customreq."'";?>=="no"){
+					$(".input-group").toggleClass("input-group");
+					$(".btn-default").addClass("hidden");}
+				}
 			</script>
 	</head>
 	<body>
