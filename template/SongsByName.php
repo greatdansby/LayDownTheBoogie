@@ -10,7 +10,7 @@ $contact = $_GET["Contact"];
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 
-$sql="SELECT * FROM SongList WHERE DJ = '$dj' Order By SongTitle";
+$sql="SELECT * FROM CustomLists inner join SongLists on ListName=SongList and SongList.DJ=CustomLists.DJ WHERE SongLists.DJ = '$dj' AND Active = 'True' Order By SongTitle";
 $songs = loadArray(mysqli_query($con, $sql),array('SongArtist','SongTitle','SongGenre'));
 
 function loadArray($result,$columns){

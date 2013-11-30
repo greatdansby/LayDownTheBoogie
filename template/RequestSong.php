@@ -1,11 +1,19 @@
 <?php
-
 $username = $_GET["Username"];
 $contact = $_GET["Contact"];
 $song = $_GET["Song"];
 $artist = $_GET["Artist"];
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
+$con = mysqli_connect('localhost', 'boogie','boogie6', 'boogie_requests');
+if (!$con)
+  {
+  die('Could not connect: ' . mysqli_error());
+  } 
+$sql = "SELECT DJ, CustomRequest FROM DJs WHERE DJ='$dj'";
+$result = mysqli_query($con,$sql);
+$r = mysqli_fetch_assoc($result);
+$customreq = $r[0]["CustomRequest"];
 ?>
 <html>
 	<head>
@@ -17,6 +25,11 @@ $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 			<script src="../js/jquery.js"></script> 
 			<script src="../bootstrap/js/bootstrap.min.js"></script>
 			<script src="../js/gatracking.js"></script>
+			<script type="text/javascript">
+				if(<?php echo $customreq;?>=="no"){
+				$(".input-group").toggleClass("input-group");
+				$(".btn-default").addClass("hidden");}
+			</script>
 	</head>
 	<body>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
