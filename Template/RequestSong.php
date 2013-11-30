@@ -30,7 +30,7 @@ $customreq = $r["CustomRequest"];
 					if(<?php echo "'".$customreq."'";?>=="no"){
 					$(".input-group").toggleClass("input-group");
 					$(".btn-default").addClass("hidden");}
-				}
+				});
 			</script>
 	</head>
 	<body>
