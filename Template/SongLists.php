@@ -155,7 +155,7 @@ function loadArray($result,$columns){
 				}
 				function toggleCustom(){
 					$.ajax({
-						url: 'customrequest.php',
+						url: 'customrequests.php',
 						type: "POST",
 						data: {
 						'DJ' : '<?echo $dj;?>',
