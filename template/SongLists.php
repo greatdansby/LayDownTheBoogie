@@ -16,7 +16,8 @@ if(isset($_POST['pw'])){
 	$result = mysqli_query($con,$sql);
 	if(mysqli_num_rows($result)==1){
 		$loggedin=true;
-		$customreq = $result[0]["CustomRequest"];
+		$r = mysqli_fetch_assoc($result);
+		$customreq = $r[0]["CustomRequest"];
 		$sql = "UPDATE DJs SET LastIP = '".$_SERVER['REMOTE_ADDR']."' WHERE DJ='$dj'";
 		if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 	} else {
@@ -30,7 +31,8 @@ if(isset($_POST['pw'])){
 	$result = mysqli_query($con,$sql);
 	if(mysqli_num_rows($result)==1){
 		$loggedin=true;
-		$customreq = $result[0]["CustomRequest"];
+		$r = mysqli_fetch_assoc($result);
+		$customreq = $r[0]["CustomRequest"];
 	}else{
 		echo "<div class='alert alert-block alert-info fade in'>
 			<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
