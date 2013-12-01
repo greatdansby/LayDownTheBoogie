@@ -21,8 +21,8 @@ if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 $sql="INSERT INTO CustomLists(SongTitle, SongArtist, SongGenre, DJ, SongList, Status) SELECT SongTitle, SongArtist, SongGenre, '$Name', 'Top 1000', 'Active' FROM SongList WHERE DJ='Template'";
 if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 
-recurse_copy("Template",strtolower($Name));
-recurse_copy("Template",$Name);
+recurse_copy("template",strtolower($Name));
+recurse_copy("template",$Name);
 header('Location: SignedUp.php?Name='.urlencode($Name));
 }
 
