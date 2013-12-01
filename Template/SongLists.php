@@ -225,6 +225,7 @@ function loadArray($result,$columns){
 			</div>
 			<div class="col-xs-12 col-md-12">
 				<h1 class=blue>Song Lists</h1>
+				<h4>Choose the active song list below. Use our preconfigured lists or upload your own.</h4>
 				<div class="table-responsive">
 					<table class="table table-condensed" width="100%">
 						<tbody><tr>

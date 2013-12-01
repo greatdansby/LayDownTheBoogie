@@ -22,6 +22,7 @@ $sql="INSERT INTO CustomLists(SongTitle, SongArtist, SongGenre, DJ, SongList, St
 if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 
 recurse_copy("Template",strtolower($Name));
+recurse_copy("Template",$Name);
 header('Location: SignedUp.php?Name='.urlencode($Name));
 }
 
