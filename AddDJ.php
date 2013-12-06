@@ -20,6 +20,8 @@ $sql="INSERT INTO DJs(DJ, Email, PW, Status) VALUES('$Name','$Email','$PW', 'Act
 if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 $sql="INSERT INTO CustomLists(SongTitle, SongArtist, SongGenre, DJ, SongList, Status) SELECT SongTitle, SongArtist, SongGenre, '$Name', 'Top 1000', 'Active' FROM SongList WHERE DJ='Template'";
 if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
+$sql="INSERT INTO SongLists(ListName, DJ, ShowGenre, AvailableList, SongCount, Active) VALUES('Top 1000', '$Name', '', 'True', '1000', 'True');
+if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}
 
 recurse_copy("template",strtolower($Name));
 recurse_copy("template",$Name);
