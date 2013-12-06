@@ -41,7 +41,7 @@ if(isset($_POST['pw'])){
 		  </div>";
 	}
 }
-if($loggedin=true){
+if($loggedin==true){
 	if(isset($_GET['SongList'])){
 		$sql="UPDATE SongLists SET Active='False' WHERE DJ = '$dj'";
 		if(!mysqli_query($con,$sql)){printf("Error: %s\n", mysqli_error($con));}

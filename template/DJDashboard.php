@@ -39,7 +39,7 @@ if(isset($_POST['pw'])){
 		  </div>";
 	}
 }
-if($loggedin=true){
+if($loggedin==true){
 
 $sql="SELECT Title, Artist, COUNT(ID) as RequestCount FROM Requests WHERE DJ = '$dj' AND Status='Active' Group By Title, Artist Order By RequestCount Desc";
 $songs = loadArray(mysqli_query($con, $sql),array('Artist','Title','RequestCount'));
