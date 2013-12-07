@@ -110,8 +110,8 @@ function loadArray($result,$columns){
 		  <div class="navbar-header">
 			<a class="navbar-brand" href="#">DJ Dashboard
 			<?php if($loggedin==true){
-			//echo ': '.$dj.'</a>';
-			//} else {
+			echo ': '.$dj.'</a>';
+			} else {
 			echo '</a>
 			<form class="navbar-form navbar-left" role="search" method=post action=DJDashboard.php id="frm1">
 				<div class="form-group">
