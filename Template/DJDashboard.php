@@ -108,7 +108,7 @@ function loadArray($result,$columns){
       <div class="container nav-style">
 		  <div class="navbar-header">
 			<a class="navbar-brand" href="#">DJ Dashboard
-			<?php if($loggedin==true){
+			<?php if(!$loggedin){
 			echo ': '.$dj.'</a>';
 			} else {
 			echo '</a>
