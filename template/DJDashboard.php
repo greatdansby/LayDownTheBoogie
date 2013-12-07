@@ -8,6 +8,7 @@ $username = $_GET["Username"];
 $contact = $_GET["Contact"];
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
+$loggedin=false;
 if(isset($_POST['pw'])){
 	$pw = $_POST['pw'];
 	$sql = "SELECT DJ FROM DJs WHERE DJ='$dj' AND PW='".$pw."'";
@@ -108,7 +109,7 @@ function loadArray($result,$columns){
       <div class="container nav-style">
 		  <div class="navbar-header">
 			<a class="navbar-brand" href="#">DJ Dashboard
-			<?php if(!$loggedin){
+			<?php if($loggedin==true){
 			echo ': '.$dj.'</a>';
 			} else {
 			echo '</a>
