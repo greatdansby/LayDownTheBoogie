@@ -1,11 +1,12 @@
 <?php
-
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
 $Name = str_replace(' ', '', $_GET["Name"]);
-echo $Name." to be replaced with template";
+echo $Name." to be replaced with template\n";
 recurse_copy("template",strtolower($Name));
-echo "Lowercase directory copied";
+echo "Lowercase directory copied\n";
 recurse_copy("template",$Name);
-echo "Uppercase directory copied";
+echo "Uppercase directory copied\n";
 
 function recurse_copy($src,$dst) { 
     $dir = opendir($src); 
@@ -21,4 +22,5 @@ function recurse_copy($src,$dst) {
     } 
     closedir($dir); 
 } 
+ini_set('display_errors', 'Off');
 ?>
