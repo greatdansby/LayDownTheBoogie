@@ -6,7 +6,7 @@ if (!$con)
   die('Could not connect: ' . mysqli_error());
   }
 
-$Name = $_POST["Name"];
+$Name = str_replace(' ', '', $_POST["Name"]);
 $Email = $_POST["Email"];
 $PW = $_POST["PW"];
 
