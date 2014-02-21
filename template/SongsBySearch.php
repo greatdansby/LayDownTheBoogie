@@ -15,7 +15,10 @@ $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
 $sql="SELECT * FROM SongList WHERE DJ = '$dj' and (SongTitle Like '%$searchTerms%' OR SongArtist Like '%$searchTerms%' OR SongGenre Like '%$searchTerms%') Order By SongTitle";
 $songs = loadArray(mysqli_query($con, $sql),array('SongArtist','SongTitle','SongGenre'));
 
-
+$sql = "SELECT DJ, CustomRequest FROM DJs WHERE DJ='$dj'";
+$result = mysqli_query($con,$sql);
+$r = mysqli_fetch_assoc($result);
+$customreq = $r["CustomRequest"];
 
 function loadArray($result,$columns){
 	$rows = array();
@@ -58,6 +61,7 @@ function loadArray($result,$columns){
 	</nav>
     <div class="container" style="margin-top:40px;">
 <?		
+if($customreq=="yes") echo "<a href='RequestSong.php?Username=".$username."&Contact=".$contact".'>Can\'t find what you\'re looking for? Click here to enter a custom request."; ?>
 foreach($songs as $song) {
 ?>
 		<div class="row">
