@@ -69,9 +69,9 @@ $customreq = $r["CustomRequest"];
 			<div class="col-xs-12">
 				<p class="text-muted"><b>Song</b></p>
 				<div class="input-group btn-margin">
-					<input type="text" class="form-control" name="Song" id=Song readonly value="<?echo $song;?>">
+					<input type="text" class="form-control" name="Song" id=Song <? if(strlen($song)>0) echo "readonly";?> value="<?echo $song;?>">
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="button" onClick="$('#Song').removeAttr('readonly');">Edit</button>
+						<button class="btn btn-default" type="<? if($customreq=="yes") {echo "button";} else {echo "hidden";}?> " onClick="$('#Song').removeAttr('readonly');">Edit</button>
 					</span>
 				</div>
 			</div>
@@ -80,7 +80,7 @@ $customreq = $r["CustomRequest"];
 			<div class="col-xs-12">
 				<p class="text-muted"><b>Artist</b></p>
 				<div class="input-group btn-margin">
-					<input type="text" class="form-control" name="Artist" id=Artist readonly value="<?echo $artist;?>">
+					<input type="text" class="form-control" name="Artist" id=Artist <? if(strlen($song)>0) echo "readonly";?> value="<?echo $artist;?>">
 					<span class="input-group-btn">
 						<button class="btn btn-default" type="button" onClick="$('#Artist').removeAttr('readonly');">Edit</button>
 					</span>
