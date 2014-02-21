@@ -1,14 +1,14 @@
 <?php
 
 $Name = str_replace(' ', '', $_POST["Name"]);
+echo $Name." to be replaced with template";
 recurse_copy("template",strtolower($Name));
+echo "Lowercase directory copied";
 recurse_copy("template",$Name);
-header('Location: SignedUp.php?Name='.urlencode($Name));
-}
+echo "Uppercase directory copied";
 
 function recurse_copy($src,$dst) { 
     $dir = opendir($src); 
-    @mkdir($dst); 
     while(false !== ( $file = readdir($dir)) ) { 
         if (( $file != '.' ) && ( $file != '..' )) { 
             if ( is_dir($src . '/' . $file) ) { 
