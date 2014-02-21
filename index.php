@@ -21,7 +21,7 @@
 				}
 			</style>
 	<body>
-	<div class="navbar navbar-fixed-top">
+	<div class="navbar navbar-fixed-top hidden-phone">
       <div class="container nav-style">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -63,6 +63,10 @@
 		<a id="signup"></a>
 		<hr class="featurette-divider">
 		<div class="row">
+			<div class="col-xs-12 col-md-5">
+				<h1 class=blue>Sign Up for the Beta Test</h1>
+				<h4>Create a free <u>Trial Account</u> today during our beta phase using the form</h4>
+			</div>
 			<div class="col-xs-12 col-md-3">
 				<form method="POST" action="AddDJ.php">
 					<input id='Name' name="Name" class="form-control btn-margin" type="text" placeholder="DJ Name">
@@ -70,11 +74,7 @@
 					<input id='PW' name="PW" class="form-control btn-margin" type="password" placeholder="Password">
 				<button class="btn btn-block btn-lg btn-primary btn-margin" id="submitbtn" type=submit>Create a Trial Account</button>
 				<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg btn-margin btn-block">Give Feedback</a>
-			</div>
-			<div class="col-xs-12 col-md-5">
-				<h1 class=blue>Sign Up for the Beta Test</h1>
-				<h4>Create a free account today during our beta phase using the form on the left</h4>
-			</div>
+			</div>			
 			<div class="col-xs-12 col-md-4">
 				<h1 class=blue>Take it for a Test Drive</h1>
 				<h4>Scan the QR code to see the live app on your phone. Or <a href="template/DJDashboard.php">click here</a> to see the DJ Dashboard (password is TESTDRIVE).</h4>
