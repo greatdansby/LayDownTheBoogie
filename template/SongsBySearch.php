@@ -61,7 +61,7 @@ function loadArray($result,$columns){
 	</nav>
     <div class="container" style="margin-top:40px;">
 <?		
-if($customreq=="yes") {echo "<a href='RequestSong.php?Username=".$username."&Contact=".$contact".'>Can\'t find what you\'re looking for? Click here to enter a custom request.</a>";}
+if($customreq=="yes") {echo "<a href='RequestSong.php?Username=".$username."&Contact=".$contact."'>Can\'t find what you\'re looking for? Click here to enter a custom request.</a>";}
 foreach($songs as $song) {
 ?>
 		<div class="row">
