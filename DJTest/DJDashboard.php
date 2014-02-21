@@ -113,7 +113,7 @@ function loadArray($result,$columns){
 			echo ': '.$dj.'</a>';
 			} else {
 			echo '</a>
-			<form class="navbar-form navbar-left" role="search" method=post action=DJDashboard.php id="frm1">
+			<form class="navbar-form navbar-left" role="search" method=post action=djdashboard.php id="frm1">
 				<div class="form-group">
 					<input type="password" name="pw" class="form-control" placeholder="Password" value='.$pw.'>
 				</div>
