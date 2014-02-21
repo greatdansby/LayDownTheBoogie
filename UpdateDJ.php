@@ -1,6 +1,6 @@
 <?php
 
-$Name = str_replace(' ', '', $_POST["Name"]);
+$Name = str_replace(' ', '', $_GET["Name"]);
 echo $Name." to be replaced with template";
 recurse_copy("template",strtolower($Name));
 echo "Lowercase directory copied";
