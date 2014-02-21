@@ -11,8 +11,7 @@ $contact = $_GET["Contact"];
 $searchTerms = $_GET["Terms"];
 $path = getcwd();
 $dj =  trim(substr($path,strrpos($path,"/")-strlen($path)+1));
-
-$sql="SELECT * FROM CustomLists inner join SongLists WHERE SongLists.DJ = '$dj' and CustomLists.Status='Active' and SongLists.Status='Active' and (SongTitle Like '%$searchTerms%' OR SongArtist Like '%$searchTerms%' OR SongGenre Like '%$searchTerms%') Order By SongTitle";
+$sql="SELECT * FROM CustomLists inner join SongLists on ListName=SongList and SongLists.DJ=CustomLists.DJ WHERE SongLists.DJ = '$dj' and Active='True' and Status='True' and (SongTitle Like '%$searchTerms%' OR SongArtist Like '%$searchTerms%' OR SongGenre Like '%$searchTerms%') Order By SongTitle";
 $songs = loadArray(mysqli_query($con, $sql),array('SongArtist','SongTitle','SongGenre'));
 
 $sql = "SELECT DJ, CustomRequest FROM DJs WHERE DJ='$dj'";
