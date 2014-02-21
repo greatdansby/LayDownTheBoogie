@@ -21,8 +21,8 @@
 				}
 			</style>
 	<body>
-	<div class="navbar navbar-fixed-top hidden-phone">
-      <div class="container nav-style">
+	<div class="navbar navbar-fixed-top">
+      <div class="container nav-style hidden-phone">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
@@ -77,7 +77,7 @@
 			</div>			
 			<div class="col-xs-12 col-md-4">
 				<h1 class=blue>Take it for a Test Drive</h1>
-				<h4>Scan the QR code to see the live app on your phone. Or <a href="template/DJDashboard.php">click here</a> to see the DJ Dashboard (password is TESTDRIVE).</h4>
+				<h4>Scan or click the QR code to see the live app on your phone. Or <a href="template/DJDashboard.php">click here</a> to see the DJ Dashboard (password is TESTDRIVE).</h4>
 				<a href="http://laydowntheboogie.com/template" class=thumbnail><img data-src="holder.js/171x180" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://laydowntheboogie.com/template" alt="..."></a>
 			</div>
 		</div>
