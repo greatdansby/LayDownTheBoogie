@@ -19,18 +19,23 @@
 					background-repeat: no-repeat;
 					margin-top: 30px;
 				}
+				@media (max-width: 767px) { 
+					.navbar{
+					display:none;
+				}
+				}
 			</style>
 	<body>
-	<div class="navbar navbar-fixed-top hidden-phone">
-      <div class="container nav-style hidden-phone">
-        <div class="navbar-header hidden-phone">
+	<div class="navbar navbar-fixed-top">
+      <div class="container nav-style">
+        <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
         </div>
-        <div class="navbar-collapse collapse hidden-phone">
+        <div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#signup">Sign-Up</a></li>
