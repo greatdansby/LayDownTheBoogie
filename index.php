@@ -65,7 +65,7 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
 				<form method="POST" action="AddDJ.php">
-					<input id='Name' name="Name" class="form-control btn-margin" type="text" placeholder="DJ Name (no spaces)">
+					<input id='Name' name="Name" class="form-control btn-margin" type="text" placeholder="DJ Name">
 					<input id='Email' name="Email" class="form-control btn-margin" type="text" placeholder="E-mail">
 					<input id='PW' name="PW" class="form-control btn-margin" type="password" placeholder="Password">
 				<button class="btn btn-block btn-lg btn-primary btn-margin" id="submitbtn" type=submit>Create a Trial Account</button>
