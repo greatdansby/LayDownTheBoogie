@@ -53,7 +53,7 @@
     </div>
     <div class="container">
 		<div class="row splash">
-			<div class="col-xs-5 col-md-5">
+			<div class="col-xs-12 col-md-5">
 				<img src="img/logo.png" class="img-responsive" alt="Responsive logo">
 				<h3>A song request system allowing guests to request songs using their smartphone. As a DJ, you can manage your request queue, capture guest information and advertise your business.</h3>
 			</div>        
